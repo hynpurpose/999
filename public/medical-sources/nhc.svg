@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+  <rect width="128" height="128" rx="28" fill="#C8102E"/>
+  <path d="M64 22c18 14 30 14 30 14s-4 16-2 30c2 16 10 24 10 24s-16 2-24 12c-6 8-8 18-8 18s-2-10-8-18c-8-10-24-12-24-12s8-8 10-24c2-14-2-30-2-30s12 0 30-14z" fill="#F7C948"/>
+  <circle cx="64" cy="58" r="18" fill="#C8102E"/>
+  <text x="64" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#F7C948">卫</text>
+</svg>

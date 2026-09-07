@@ -1,0 +1,10 @@
+<svg viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="quote-gradient-meeting" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stopColor="#3b82f6" />
+      <stop offset="100%" stopColor="#1d4ed8" />
+    </linearGradient>
+  </defs>
+  <path d="M0 50C0 22.4 22.4 0 50 0V30C39 30 30 39 30 50H50V100H0V50Z" fill="url(#quote-gradient-meeting)" />
+  <path d="M65 50C65 22.4 87.4 0 115 0V30C104 30 95 39 95 50H115V100H65V50Z" fill="url(#quote-gradient-meeting)" />
+</svg>

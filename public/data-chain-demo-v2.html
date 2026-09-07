@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI 提问量数据从哪来 · 泳道版</title>
+<style>
+  @font-face { font-family: 'MiSans'; src: url('/fonts/MiSans-Regular.otf') format('opentype'); font-weight: 400; }
+  @font-face { font-family: 'MiSans'; src: url('/fonts/MiSans-Medium.otf') format('opentype'); font-weight: 500; }
+  @font-face { font-family: 'MiSans'; src: url('/fonts/MiSans-Bold.otf') format('opentype'); font-weight: 700; }
+  @font-face { font-family: 'MiSans'; src: url('/fonts/MiSans-Heavy.otf') format('opentype'); font-weight: 900; }
+  @font-face { font-family: 'AlimamaShuHeiTi'; src: url('/fonts/AlimamaShuHeiTi.ttf') format('truetype'); font-weight: 700; }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; background: #000; overflow: hidden; font-family: 'MiSans', sans-serif; }
+
+  #stage {
+    position: absolute; width: 1920px; height: 1080px;
+    left: 50%; top: 50%; transform-origin: center center;
+    background: #000;
+  }
+
+  h1 {
+    position: absolute; top: 112px; left: 40px;
+    font-family: 'AlimamaShuHeiTi', sans-serif;
+    font-size: 86px; line-height: 96px; font-weight: 700;
+    color: #FFF; letter-spacing: 0.02em;
+  }
+
+  /* ── 内容安全区 ── */
+  #content {
+    position: absolute; top: 250px; left: 40px;
+    width: 1840px; height: 770px;
+  }
+
+  /* 泳道 */
+  .lane { position: absolute; top: 0; height: 100%; }
+  .lane-title {
+    position: absolute; top: 0; left: 60px;
+    font-size: 28px; font-weight: 900; color: #FFF;
+  }
+  .lane-sub {
+    position: absolute; top: 40px; left: 60px;
+    font-size: 17px; color: #71717A;
+  }
+  .lane-line {
+    position: absolute; left: 20px; top: 0; bottom: 0;
+    width: 2px; background: #27272A;
+  }
+  .lane-bar {
+    position: absolute; left: 19px; width: 4px; border-radius: 2px;
+  }
+
+  .card {
+    position: absolute; left: 60px;
+    background: #0D0D10; border: 1px solid #27272A; border-radius: 16px;
+    padding: 20px 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+  .card h4 { font-size: 23px; font-weight: 700; color: #FFF; line-height: 30px; margin-bottom: 8px; }
+  .card p { font-size: 18px; line-height: 26px; color: #A1A1AA; }
+  .card p strong { color: #FFF; font-weight: 700; }
+  .card.hl { border-color: rgba(0, 76, 229, 0.6); box-shadow: 0 0 30px rgba(0, 76, 229, 0.15); }
+
+  /* 工具徽章 */
+  .tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .tool {
+    border: 1.5px solid #2E6BFF; background: rgba(0,76,229,0.12);
+    border-radius: 8px; padding: 5px 12px;
+    font-size: 16px; font-weight: 700; color: #E3ECFF;
+    display: flex; align-items: center; gap: 6px;
+  }
+
+  /* 数据条 */
+  .vol { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+  .vol-row { display: flex; align-items: center; gap: 8px; }
+  .vol-row .v-label { width: 130px; font-size: 15px; color: #D4D4D8; text-align: right; flex-shrink: 0; white-space: nowrap; }
+  .vol-row .v-track { flex: 1; height: 14px; background: #1D1D22; border-radius: 3px; overflow: hidden; }
+  .vol-row .v-fill { height: 100%; background: linear-gradient(to right, #0038AB, #2E6BFF); border-radius: 3px; }
+  .vol-row .v-num { width: 84px; font-size: 14px; color: #6D9BFF; font-weight: 700; flex-shrink: 0; }
+  .vol-row.dim .v-fill { background: #33333B; }
+  .vol-row.dim .v-num { color: #71717A; font-weight: 400; }
+  .vol-row.dim .v-label { color: #8E8E99; }
+
+  /* 选词行 */
+  .pick { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+  .pick-row {
+    border: 1px solid #27272A; border-radius: 9px; padding: 8px 12px;
+    font-size: 16px; color: #C9C9D1;
+    display: flex; justify-content: space-between; gap: 8px; align-items: center;
+  }
+  .pick-row .tag { font-size: 13px; color: #71717A; flex-shrink: 0; }
+  .pick-row.win { border-color: #2E6BFF; background: rgba(0, 76, 229, 0.12); }
+  .pick-row.win .tag { color: #6D9BFF; font-weight: 700; }
+
+  /* 箭头标签 */
+  .flow-label {
+    position: absolute; font-size: 17px; font-weight: 700; color: #6D9BFF;
+    text-align: center;
+  }
+  .flow-label small { display: block; font-size: 14px; font-weight: 400; color: #71717A; margin-top: 2px; }
+  .money-label {
+    position: absolute; font-size: 16px; font-weight: 700; color: #34D399; text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div id="stage">
+  <h1>AI 提问量数据从哪来？</h1>
+
+  <div id="content">
+    <!-- SVG 流程箭头层 -->
+    <svg style="position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0">
+      <defs>
+        <marker id="aR" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#52525B" />
+        </marker>
+        <marker id="aB" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2E6BFF" />
+        </marker>
+        <marker id="aG" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#34D399" />
+        </marker>
+      </defs>
+
+      <!-- 用户工具卡 → 数据商抓取卡 -->
+      <path d="M 420 210 C 470 210, 480 165, 520 165" fill="none" stroke="#2E6BFF" stroke-width="2.5" marker-end="url(#aB)" />
+      <!-- 数据商打包卡 → Profound 买入卡 -->
+      <path d="M 880 480 C 930 480, 940 165, 980 165" fill="none" stroke="#2E6BFF" stroke-width="2.5" marker-end="url(#aB)" />
+      <!-- Profound 数据卡 → 我们选词卡 -->
+      <path d="M 1340 480 C 1390 480, 1400 200, 1440 200" fill="none" stroke="#2E6BFF" stroke-width="2.5" marker-end="url(#aB)" />
+      <!-- 钱：Profound → 数据商 -->
+      <path d="M 985 620 H 890" fill="none" stroke="#34D399" stroke-width="2.5" marker-end="url(#aG)" stroke-dasharray="7 5" />
+      <!-- 钱：我们 → Profound -->
+      <path d="M 1445 620 H 1350" fill="none" stroke="#34D399" stroke-width="2.5" marker-end="url(#aG)" stroke-dasharray="7 5" />
+    </svg>
+
+    <!-- ══ 泳道一：用户 ══ -->
+    <div class="lane" style="left:0;width:460px">
+      <div class="lane-title">用户</div>
+      <div class="lane-sub">数百万真实用户 · 不知不觉在贡献数据</div>
+      <div class="lane-line"></div>
+      <div class="lane-bar" style="top:90px;height:400px;background:#10B981"></div>
+
+      <div class="card" style="top:90px;width:360px">
+        <h4>装了这些日常工具</h4>
+        <div class="tools">
+          <span class="tool">&#128737;&#65039; 免费 VPN</span>
+          <span class="tool">&#9940; 广告拦截器</span>
+          <span class="tool">&#9000;&#65039; 输入法</span>
+          <span class="tool">&#10024; AI 助手侧边栏</span>
+        </div>
+        <p style="margin-top:12px">安装时点的「同意」，授权它们<strong>读取网页内容和键盘输入</strong></p>
+      </div>
+
+      <div class="card" style="top:360px;width:360px">
+        <h4>正常使用 AI</h4>
+        <p>「好看的电视推荐？」<br/>——这条对话被工具<strong>原样记录</strong>：提问、回答、时间戳</p>
+      </div>
+    </div>
+
+    <!-- ══ 泳道二：数据商 ══ -->
+    <div class="lane" style="left:460px;width:460px">
+      <div class="lane-title">数据商</div>
+      <div class="lane-sub">Datos、BiScience 这类点击流公司</div>
+      <div class="lane-line"></div>
+      <div class="lane-bar" style="top:110px;height:480px;background:#8B5CF6"></div>
+
+      <div class="card" style="top:110px;width:360px">
+        <h4>回收原始对话</h4>
+        <p>从<strong>成百上千个插件</strong>持续回收用户与 AI 的对话记录</p>
+      </div>
+
+      <div class="card" style="top:290px;width:360px">
+        <h4>清洗 · 匿名化</h4>
+        <p>去除个人身份信息，只留「谁都不知道是谁」的问题本身</p>
+      </div>
+
+      <div class="card" style="top:450px;width:360px">
+        <h4>打包出售</h4>
+        <p>做成标准数据商品，<strong>按月卖给任何愿意付钱的买家</strong></p>
+      </div>
+    </div>
+
+    <!-- ══ 泳道三：Profound ══ -->
+    <div class="lane" style="left:920px;width:460px">
+      <div class="lane-title">Profound</div>
+      <div class="lane-sub">海外 GEO 数据公司 · 自己不采集</div>
+      <div class="lane-line"></div>
+      <div class="lane-bar" style="top:110px;height:480px;background:#2E6BFF"></div>
+
+      <div class="card" style="top:110px;width:360px">
+        <h4>花钱买数据</h4>
+        <p>每月买回<strong>数千万条真实对话</strong>，统计建模校正人群偏差</p>
+      </div>
+
+      <div class="card hl" style="top:290px;width:360px">
+        <h4>数出每类问题的提问量</h4>
+        <div class="vol">
+          <div class="vol-row">
+            <span class="v-label">好看的电视</span>
+            <span class="v-track"><span class="v-fill" style="width:96%;display:block"></span></span>
+            <span class="v-num">8,200/月</span>
+          </div>
+          <div class="vol-row">
+            <span class="v-label">画质好的电视</span>
+            <span class="v-track"><span class="v-fill" style="width:62%;display:block"></span></span>
+            <span class="v-num">5,100/月</span>
+          </div>
+          <div class="vol-row dim">
+            <span class="v-label">设计外观好的电视</span>
+            <span class="v-track"><span class="v-fill" style="width:12%;display:block"></span></span>
+            <span class="v-num">310/月</span>
+          </div>
+          <div class="vol-row dim">
+            <span class="v-label">防蓝光电视</span>
+            <span class="v-track"><span class="v-fill" style="width:8%;display:block"></span></span>
+            <span class="v-num">190/月</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ 泳道四：我们 ══ -->
+    <div class="lane" style="left:1380px;width:460px">
+      <div class="lane-title">我们</div>
+      <div class="lane-sub">购买同一份数据 · 替客户选词</div>
+      <div class="lane-line"></div>
+      <div class="lane-bar" style="top:145px;height:445px;background:#2E6BFF"></div>
+
+      <div class="card" style="top:145px;width:380px">
+        <h4>直接购买这份数据</h4>
+        <p>和 Profound 向数据商买数据，是<strong>同一条链上的同一种买法</strong></p>
+      </div>
+
+      <div class="card hl" style="top:350px;width:380px">
+        <h4>数据说了算的选词</h4>
+        <div class="pick">
+          <div class="pick-row win"><span>&#10003; 好看的电视推荐</span><span class="tag">量大 · 优先做</span></div>
+          <div class="pick-row"><span>设计外观好的电视</span><span class="tag">被上面覆盖</span></div>
+          <div class="pick-row"><span>&#10007; 安装方便的电视</span><span class="tag">痛点词 · 不做</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 流向标签 -->
+    <div class="flow-label" style="left:395px;top:120px;width:150px">抓取上传<small>对话原样记录</small></div>
+    <div class="flow-label" style="left:855px;top:120px;width:150px">授权出售<small>数千万条/月</small></div>
+    <div class="flow-label" style="left:1315px;top:145px;width:150px">购买数据<small>真实提问量</small></div>
+    <div class="money-label" style="left:870px;top:632px;width:140px">$ 付费购买</div>
+    <div class="money-label" style="left:1330px;top:632px;width:140px">$ 付费购买</div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const stage = document.getElementById('stage');
+    function fit() {
+      const s = Math.min(innerWidth / 1920, innerHeight / 1080);
+      stage.style.transform = 'translate(-50%, -50%) scale(' + s + ')';
+    }
+    addEventListener('resize', fit); fit();
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,888 @@
+{
+  "meta": {
+    "fetched_at": "2026-08-04T10:44:06.915Z",
+    "api_base": "https://api.geotopone.com",
+    "project_ids": [
+      182,
+      181,
+      239
+    ],
+    "project_id": null,
+    "project_name": "慕思智能床、慕思AI床垫、慕思床垫",
+    "target_product": "慕思智能床、慕思AI床垫、慕思床垫",
+    "aggregation": "sum_citations_recalc_share",
+    "platform_id": 2,
+    "platform_name": "豆包",
+    "platform_logo": "https://app.geoindexfuture.com/logo/doubao.png",
+    "metric_note": "三产品合计：引用条数加总；share = 该来源合计引用 / 豆包合计总引用",
+    "articles_fetched_at": "2026-08-04T10:44:06.916Z"
+  },
+  "months": [
+    {
+      "label": "6月",
+      "start_date": "2026-06-01",
+      "end_date": "2026-06-30",
+      "total_conversations": 560,
+      "total_citations": 7695,
+      "citation_rate": 84.1,
+      "source_count": 191,
+      "douyin_citations": 668,
+      "douyin_share": 8.7,
+      "douyin_citation_rate": 55.4,
+      "bytedance_citations": 1623,
+      "bytedance_share": 21.1,
+      "top_sources": [
+        {
+          "rank": 1,
+          "name": "什么值得买社区频道",
+          "domain": "smzdm.com",
+          "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=%2BwPsdoPoNDfa241xjO4mOLPKH4o%3D",
+          "citation_count": 1508,
+          "share": 19.6,
+          "citation_rate": 80.2
+        },
+        {
+          "rank": 2,
+          "name": "今日头条",
+          "domain": "toutiao.com",
+          "logo_url": "https://p26-spider-image-sign.byteimg.com/isp-i18n-media/image/118f7a3625ad8ebbbc11d04f118d2e10~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816929&x-signature=0BCf7I6pCkxfK9gutZJAh6L1BLA%3D",
+          "citation_count": 952,
+          "share": 12.4,
+          "citation_rate": 67.3
+        },
+        {
+          "rank": 3,
+          "name": "抖音",
+          "domain": "iesdouyin.com",
+          "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/img/27422dd3ce8d2f41b45309e5aeca806b~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=W8ZL8IDW1iYKUjhoHgBVhf82%2BBM%3D",
+          "citation_count": 668,
+          "share": 8.7,
+          "citation_rate": 55.4
+        },
+        {
+          "rank": 4,
+          "name": "IT之家",
+          "domain": "ithome.com",
+          "logo_url": "https://cdn.deepseek.com/site-icons/ithome.com",
+          "citation_count": 581,
+          "share": 7.6,
+          "citation_rate": 32.3
+        },
+        {
+          "rank": 5,
+          "name": "网易",
+          "domain": "163.com",
+          "logo_url": "https://cdn.deepseek.com/site-icons/163.com",
+          "citation_count": 469,
+          "share": 6.1,
+          "citation_rate": 46.6
+        },
+        {
+          "rank": 6,
+          "name": "搜狐网",
+          "domain": "sohu.com",
+          "logo_url": "https://p26-spider-image-sign.byteimg.com/isp-i18n-media/image/85a1f404488a843fec0041af8590387f~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816929&x-signature=A3VJpRndCfC7Mvc8qe1HHyHiKXo%3D",
+          "citation_count": 413,
+          "share": 5.4,
+          "citation_rate": 44.3
+        },
+        {
+          "rank": 7,
+          "name": "新浪新闻",
+          "domain": "sina.cn",
+          "logo_url": "https://cdn.deepseek.com/site-icons/sina.cn",
+          "citation_count": 346,
+          "share": 4.5,
+          "citation_rate": 41.6
+        },
+        {
+          "rank": 8,
+          "name": "中国经济新闻网",
+          "domain": "cet.com.cn",
+          "logo_url": "https://cdn.deepseek.com/site-icons/cet.com.cn",
+          "citation_count": 306,
+          "share": 4,
+          "citation_rate": 30.7
+        },
+        {
+          "rank": 9,
+          "name": "新京报",
+          "domain": "bjnews.com.cn",
+          "logo_url": "https://cdn.deepseek.com/site-icons/bjnews.com.cn",
+          "citation_count": 162,
+          "share": 2.1,
+          "citation_rate": 22
+        },
+        {
+          "rank": 10,
+          "name": "咸宁新闻网",
+          "domain": "xnnews.com.cn",
+          "logo_url": "https://cdn.deepseek.com/site-icons/xnnews.com.cn",
+          "citation_count": 150,
+          "share": 1.9,
+          "citation_rate": 20.2
+        }
+      ]
+    },
+    {
+      "label": "7月",
+      "start_date": "2026-07-01",
+      "end_date": "2026-07-31",
+      "total_conversations": 879,
+      "total_citations": 11467,
+      "citation_rate": 71.9,
+      "source_count": 200,
+      "douyin_citations": 8722,
+      "douyin_share": 76.1,
+      "douyin_citation_rate": 69.9,
+      "bytedance_citations": 8996,
+      "bytedance_share": 78.5,
+      "top_sources": [
+        {
+          "rank": 1,
+          "name": "抖音",
+          "domain": "iesdouyin.com",
+          "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/img/27422dd3ce8d2f41b45309e5aeca806b~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=W8ZL8IDW1iYKUjhoHgBVhf82%2BBM%3D",
+          "citation_count": 8722,
+          "share": 76.1,
+          "citation_rate": 69.9
+        },
+        {
+          "rank": 2,
+          "name": "什么值得买社区频道",
+          "domain": "smzdm.com",
+          "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=%2BwPsdoPoNDfa241xjO4mOLPKH4o%3D",
+          "citation_count": 291,
+          "share": 2.5,
+          "citation_rate": 16.2
+        },
+        {
+          "rank": 3,
+          "name": "今日头条",
+          "domain": "toutiao.com",
+          "logo_url": "https://p26-spider-image-sign.byteimg.com/isp-i18n-media/image/118f7a3625ad8ebbbc11d04f118d2e10~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816929&x-signature=0BCf7I6pCkxfK9gutZJAh6L1BLA%3D",
+          "citation_count": 252,
+          "share": 2.2,
+          "citation_rate": 17.4
+        },
+        {
+          "rank": 4,
+          "name": "搜狐网",
+          "domain": "sohu.com",
+          "logo_url": "https://p26-spider-image-sign.byteimg.com/isp-i18n-media/image/85a1f404488a843fec0041af8590387f~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816929&x-signature=A3VJpRndCfC7Mvc8qe1HHyHiKXo%3D",
+          "citation_count": 120,
+          "share": 1,
+          "citation_rate": 10.5
+        },
+        {
+          "rank": 5,
+          "name": "新京报",
+          "domain": "bjnews.com.cn",
+          "logo_url": "https://cdn.deepseek.com/site-icons/bjnews.com.cn",
+          "citation_count": 109,
+          "share": 1,
+          "citation_rate": 9.6
+        },
+        {
+          "rank": 6,
+          "name": "新浪新闻",
+          "domain": "sina.cn",
+          "logo_url": "https://cdn.deepseek.com/site-icons/sina.cn",
+          "citation_count": 108,
+          "share": 0.9,
+          "citation_rate": 9
+        },
+        {
+          "rank": 7,
+          "name": "淘宝网",
+          "domain": "taobao.com",
+          "logo_url": "http://t7.baidu.com/it/u=1541948399,3199707038&fm=3031&app=3031&f=JPEG?w=750&h=1000&s=A9A4DB144EB8639C153DA985030080E3",
+          "citation_count": 99,
+          "share": 0.9,
+          "citation_rate": 8.5
+        },
+        {
+          "rank": 8,
+          "name": "咸宁新闻网",
+          "domain": "xnnews.com.cn",
+          "logo_url": "https://cdn.deepseek.com/site-icons/xnnews.com.cn",
+          "citation_count": 80,
+          "share": 0.7,
+          "citation_rate": 7.7
+        },
+        {
+          "rank": 9,
+          "name": "齐家网",
+          "domain": "jia.com",
+          "logo_url": "https://cdn-yb.icon.qq.com/zuowei_dir/m_jia_com.ico",
+          "citation_count": 79,
+          "share": 0.7,
+          "citation_rate": 5.7
+        },
+        {
+          "rank": 10,
+          "name": "QQ News",
+          "domain": "qq.com",
+          "logo_url": "https://cdn.deepseek.com/site-icons/qq.com",
+          "citation_count": 65,
+          "share": 0.6,
+          "citation_rate": 5.3
+        }
+      ]
+    }
+  ],
+  "source_shift": [
+    {
+      "name": "抖音",
+      "domain": "iesdouyin.com",
+      "from": 8.7,
+      "to": 76.1,
+      "delta": 67.4
+    },
+    {
+      "name": "什么值得买社区频道",
+      "domain": "smzdm.com",
+      "from": 19.6,
+      "to": 2.5,
+      "delta": -17.1
+    },
+    {
+      "name": "今日头条",
+      "domain": "toutiao.com",
+      "from": 12.4,
+      "to": 2.2,
+      "delta": -10.2
+    },
+    {
+      "name": "IT之家",
+      "domain": "ithome.com",
+      "from": 7.6,
+      "to": 0,
+      "delta": -7.6
+    },
+    {
+      "name": "网易",
+      "domain": "163.com",
+      "from": 6.1,
+      "to": 0.5,
+      "delta": -5.6
+    },
+    {
+      "name": "搜狐网",
+      "domain": "sohu.com",
+      "from": 5.4,
+      "to": 1,
+      "delta": -4.4
+    },
+    {
+      "name": "中国经济新闻网",
+      "domain": "cet.com.cn",
+      "from": 4,
+      "to": 0,
+      "delta": -4
+    },
+    {
+      "name": "新浪新闻",
+      "domain": "sina.cn",
+      "from": 4.5,
+      "to": 0.9,
+      "delta": -3.6
+    },
+    {
+      "name": "咸宁新闻网",
+      "domain": "xnnews.com.cn",
+      "from": 1.9,
+      "to": 0.7,
+      "delta": -1.2
+    },
+    {
+      "name": "新京报",
+      "domain": "bjnews.com.cn",
+      "from": 2.1,
+      "to": 1,
+      "delta": -1.1
+    },
+    {
+      "name": "淘宝网",
+      "domain": "taobao.com",
+      "from": 0.4,
+      "to": 0.9,
+      "delta": 0.5
+    },
+    {
+      "name": "齐家网",
+      "domain": "jia.com",
+      "from": 0.2,
+      "to": 0.7,
+      "delta": 0.5
+    },
+    {
+      "name": "QQ News",
+      "domain": "qq.com",
+      "from": 1.1,
+      "to": 0.6,
+      "delta": -0.5
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-06-03",
+      "total_citations": 293,
+      "douyin_citations": 43,
+      "douyin_share": 14.7
+    },
+    {
+      "date": "2026-06-04",
+      "total_citations": 591,
+      "douyin_citations": 20,
+      "douyin_share": 3.4
+    },
+    {
+      "date": "2026-06-10",
+      "total_citations": 317,
+      "douyin_citations": 32,
+      "douyin_share": 10.1
+    },
+    {
+      "date": "2026-06-11",
+      "total_citations": 814,
+      "douyin_citations": 63,
+      "douyin_share": 7.7
+    },
+    {
+      "date": "2026-06-17",
+      "total_citations": 96,
+      "douyin_citations": 29,
+      "douyin_share": 30.2
+    },
+    {
+      "date": "2026-06-18",
+      "total_citations": 1220,
+      "douyin_citations": 87,
+      "douyin_share": 7.1
+    },
+    {
+      "date": "2026-06-19",
+      "total_citations": 245,
+      "douyin_citations": 18,
+      "douyin_share": 7.3
+    },
+    {
+      "date": "2026-06-20",
+      "total_citations": 399,
+      "douyin_citations": 39,
+      "douyin_share": 9.8
+    },
+    {
+      "date": "2026-06-21",
+      "total_citations": 233,
+      "douyin_citations": 18,
+      "douyin_share": 7.7
+    },
+    {
+      "date": "2026-06-22",
+      "total_citations": 355,
+      "douyin_citations": 33,
+      "douyin_share": 9.3
+    },
+    {
+      "date": "2026-06-23",
+      "total_citations": 367,
+      "douyin_citations": 23,
+      "douyin_share": 6.3
+    },
+    {
+      "date": "2026-06-24",
+      "total_citations": 332,
+      "douyin_citations": 37,
+      "douyin_share": 11.1
+    },
+    {
+      "date": "2026-06-25",
+      "total_citations": 1266,
+      "douyin_citations": 122,
+      "douyin_share": 9.6
+    },
+    {
+      "date": "2026-06-26",
+      "total_citations": 292,
+      "douyin_citations": 35,
+      "douyin_share": 12
+    },
+    {
+      "date": "2026-06-27",
+      "total_citations": 328,
+      "douyin_citations": 16,
+      "douyin_share": 4.9
+    },
+    {
+      "date": "2026-06-29",
+      "total_citations": 325,
+      "douyin_citations": 26,
+      "douyin_share": 8
+    },
+    {
+      "date": "2026-06-30",
+      "total_citations": 222,
+      "douyin_citations": 27,
+      "douyin_share": 12.2
+    },
+    {
+      "date": "2026-07-01",
+      "total_citations": 211,
+      "douyin_citations": 38,
+      "douyin_share": 18
+    },
+    {
+      "date": "2026-07-02",
+      "total_citations": 721,
+      "douyin_citations": 270,
+      "douyin_share": 37.4
+    },
+    {
+      "date": "2026-07-03",
+      "total_citations": 164,
+      "douyin_citations": 30,
+      "douyin_share": 18.3
+    },
+    {
+      "date": "2026-07-04",
+      "total_citations": 323,
+      "douyin_citations": 289,
+      "douyin_share": 89.5
+    },
+    {
+      "date": "2026-07-05",
+      "total_citations": 358,
+      "douyin_citations": 319,
+      "douyin_share": 89.1
+    },
+    {
+      "date": "2026-07-06",
+      "total_citations": 350,
+      "douyin_citations": 323,
+      "douyin_share": 92.3
+    },
+    {
+      "date": "2026-07-07",
+      "total_citations": 315,
+      "douyin_citations": 284,
+      "douyin_share": 90.2
+    },
+    {
+      "date": "2026-07-08",
+      "total_citations": 364,
+      "douyin_citations": 327,
+      "douyin_share": 89.8
+    },
+    {
+      "date": "2026-07-09",
+      "total_citations": 1334,
+      "douyin_citations": 1085,
+      "douyin_share": 81.3
+    },
+    {
+      "date": "2026-07-10",
+      "total_citations": 375,
+      "douyin_citations": 319,
+      "douyin_share": 85.1
+    },
+    {
+      "date": "2026-07-11",
+      "total_citations": 415,
+      "douyin_citations": 363,
+      "douyin_share": 87.5
+    },
+    {
+      "date": "2026-07-12",
+      "total_citations": 385,
+      "douyin_citations": 340,
+      "douyin_share": 88.3
+    },
+    {
+      "date": "2026-07-13",
+      "total_citations": 390,
+      "douyin_citations": 316,
+      "douyin_share": 81
+    },
+    {
+      "date": "2026-07-14",
+      "total_citations": 373,
+      "douyin_citations": 327,
+      "douyin_share": 87.7
+    },
+    {
+      "date": "2026-07-16",
+      "total_citations": 808,
+      "douyin_citations": 541,
+      "douyin_share": 67
+    },
+    {
+      "date": "2026-07-17",
+      "total_citations": 363,
+      "douyin_citations": 304,
+      "douyin_share": 83.7
+    },
+    {
+      "date": "2026-07-18",
+      "total_citations": 376,
+      "douyin_citations": 328,
+      "douyin_share": 87.2
+    },
+    {
+      "date": "2026-07-19",
+      "total_citations": 201,
+      "douyin_citations": 167,
+      "douyin_share": 83.1
+    },
+    {
+      "date": "2026-07-20",
+      "total_citations": 354,
+      "douyin_citations": 306,
+      "douyin_share": 86.4
+    },
+    {
+      "date": "2026-07-21",
+      "total_citations": 386,
+      "douyin_citations": 344,
+      "douyin_share": 89.1
+    },
+    {
+      "date": "2026-07-22",
+      "total_citations": 383,
+      "douyin_citations": 331,
+      "douyin_share": 86.4
+    },
+    {
+      "date": "2026-07-23",
+      "total_citations": 1285,
+      "douyin_citations": 945,
+      "douyin_share": 73.5
+    },
+    {
+      "date": "2026-07-24",
+      "total_citations": 204,
+      "douyin_citations": 176,
+      "douyin_share": 86.3
+    },
+    {
+      "date": "2026-07-25",
+      "total_citations": 202,
+      "douyin_citations": 140,
+      "douyin_share": 69.3
+    },
+    {
+      "date": "2026-07-26",
+      "total_citations": 247,
+      "douyin_citations": 183,
+      "douyin_share": 74.1
+    },
+    {
+      "date": "2026-07-27",
+      "total_citations": 219,
+      "douyin_citations": 98,
+      "douyin_share": 44.7
+    },
+    {
+      "date": "2026-07-28",
+      "total_citations": 74,
+      "douyin_citations": 60,
+      "douyin_share": 81.1
+    },
+    {
+      "date": "2026-07-30",
+      "total_citations": 258,
+      "douyin_citations": 154,
+      "douyin_share": 59.7
+    },
+    {
+      "date": "2026-07-31",
+      "total_citations": 29,
+      "douyin_citations": 15,
+      "douyin_share": 51.7
+    }
+  ],
+  "breakpoint": "2026-07-04",
+  "platform_comparison": [
+    {
+      "platform_id": 1,
+      "platform_name": "DeepSeek",
+      "logo_url": "https://app.geoindexfuture.com/logo/deepseek.png",
+      "months": {
+        "6月": 0,
+        "7月": 0
+      }
+    },
+    {
+      "platform_id": 2,
+      "platform_name": "豆包",
+      "logo_url": "https://app.geoindexfuture.com/logo/doubao.png",
+      "months": {
+        "6月": 8.7,
+        "7月": 76.1
+      }
+    },
+    {
+      "platform_id": 3,
+      "platform_name": "元宝",
+      "logo_url": "https://app.geoindexfuture.com/logo/yuanbao.png",
+      "months": {
+        "6月": 0,
+        "7月": 0
+      }
+    },
+    {
+      "platform_id": 4,
+      "platform_name": "文心",
+      "logo_url": "https://app.geoindexfuture.com/logo/wenxin.webp",
+      "months": {
+        "6月": 0,
+        "7月": 0
+      }
+    },
+    {
+      "platform_id": 5,
+      "platform_name": "通义千问",
+      "logo_url": "https://app.geoindexfuture.com/logo/qwen.png",
+      "months": {
+        "6月": 0,
+        "7月": 0
+      }
+    },
+    {
+      "platform_id": 6,
+      "platform_name": "kimi",
+      "logo_url": "https://app.geoindexfuture.com/logo/kimi.png",
+      "months": {
+        "6月": 0,
+        "7月": 0
+      }
+    }
+  ],
+  "article_tops": {
+    "6月": [
+      {
+        "rank": 1,
+        "title": "拒绝智商税:2026 年知名品牌质量好的 AI 床垫推荐清单 - IT之家",
+        "link_url": "https://www.ithome.com/0/949/818.htm",
+        "domain": "ithome.com",
+        "platform_name": "IT之家",
+        "logo_url": "https://cdn.deepseek.com/site-icons/ithome.com",
+        "total_citations": 65,
+        "avg_citations": 16.3,
+        "has_target_product": true
+      },
+      {
+        "rank": 2,
+        "title": "2026 国内智能床垫口碑榜|5 个国产好牌闭眼冲 - IT之家",
+        "link_url": "https://www.ithome.com/0/923/490.htm",
+        "domain": "ithome.com",
+        "platform_name": "IT之家",
+        "logo_url": "https://cdn.deepseek.com/site-icons/ithome.com",
+        "total_citations": 63,
+        "avg_citations": 31.5,
+        "has_target_product": false
+      },
+      {
+        "rank": 3,
+        "title": "2026床垫品牌榜，睡眠博主用90天选出10个床垫品牌，照着选不踩雷_床垫_什么值得买",
+        "link_url": "https://post.m.smzdm.com/p/a034vn4w",
+        "domain": "smzdm.com",
+        "platform_name": "什么值得买社区频道",
+        "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=%2BwPsdoPoNDfa241xjO4mOLPKH4o%3D",
+        "total_citations": 52,
+        "avg_citations": 4.3,
+        "has_target_product": true
+      },
+      {
+        "rank": 4,
+        "title": "2026 年 1 月中高端床垫中外测评排行榜:保护脊椎 + 改善睡眠质量，前十品牌主卧床推荐_京报网",
+        "link_url": "https://www.bjd.com.cn/news/2026/01/05/11504649.shtml",
+        "domain": "bjd.com.cn",
+        "platform_name": "北京日报",
+        "logo_url": "https://cdn.deepseek.com/site-icons/bjd.com.cn",
+        "total_citations": 47,
+        "avg_citations": 3.9,
+        "has_target_product": true
+      },
+      {
+        "rank": 5,
+        "title": "2026国产床垫排名前十:国货护脊优选，健康睡眠全指南--资讯速递--中国经济新闻网",
+        "link_url": "https://www.cet.com.cn/xwsd/10346757.shtml",
+        "domain": "cet.com.cn",
+        "platform_name": "中国经济新闻网",
+        "logo_url": "https://cdn.deepseek.com/site-icons/cet.com.cn",
+        "total_citations": 47,
+        "avg_citations": 3.6,
+        "has_target_product": false
+      },
+      {
+        "rank": 6,
+        "title": "大体重人群专项解析，5000元床垫，2026年承托极限测试分享_正见新闻",
+        "link_url": "http://m.toutiao.com/group/7648241157897585158",
+        "domain": "toutiao.com",
+        "platform_name": "今日头条",
+        "logo_url": "https://p26-spider-image-sign.byteimg.com/isp-i18n-media/image/118f7a3625ad8ebbbc11d04f118d2e10~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816929&x-signature=0BCf7I6pCkxfK9gutZJAh6L1BLA%3D",
+        "total_citations": 44,
+        "avg_citations": 3.1,
+        "has_target_product": true
+      },
+      {
+        "rank": 7,
+        "title": "2026年最新2万左右口碑好的AI床垫推荐:口碑和服务一起查_卧室家具_什么值得买",
+        "link_url": "https://post.m.smzdm.com/p/120842512",
+        "domain": "smzdm.com",
+        "platform_name": "什么值得买社区频道",
+        "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/image/1a44b9ef64d4f823f24d9493b4fe660a~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=%2BwPsdoPoNDfa241xjO4mOLPKH4o%3D",
+        "total_citations": 42,
+        "avg_citations": 14,
+        "has_target_product": false
+      },
+      {
+        "rank": 8,
+        "title": "2026 实测！国内智能床哪个牌子好？8 大爆款闭眼入",
+        "link_url": "https://www.ithome.com/0/915/865.htm",
+        "domain": "ithome.com",
+        "platform_name": "IT之家",
+        "logo_url": "https://cdn.deepseek.com/site-icons/ithome.com",
+        "total_citations": 41,
+        "avg_citations": 9.5,
+        "has_target_product": true
+      },
+      {
+        "rank": 9,
+        "title": "别花2万块买个电动排骨架!2026年AI床垫品牌前十名指南_Sleep_算法_睡眠",
+        "link_url": "https://m.sohu.com/a/1022991492_120399995",
+        "domain": "sohu.com",
+        "platform_name": "搜狐网",
+        "logo_url": "https://p26-spider-image-sign.byteimg.com/isp-i18n-media/image/85a1f404488a843fec0041af8590387f~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816929&x-signature=A3VJpRndCfC7Mvc8qe1HHyHiKXo%3D",
+        "total_citations": 37,
+        "avg_citations": 9.3,
+        "has_target_product": true
+      },
+      {
+        "rank": 10,
+        "title": "2026 年最新AI 智能床垫品牌排行榜",
+        "link_url": "https://t.cj.sina.cn/articles/view/5313601638/13cb7206600101nxdg",
+        "domain": "sina.cn",
+        "platform_name": "新浪新闻",
+        "logo_url": "https://cdn.deepseek.com/site-icons/sina.cn",
+        "total_citations": 37,
+        "avg_citations": 12.3,
+        "has_target_product": false
+      }
+    ],
+    "7月": [
+      {
+        "rank": 1,
+        "title": "各大床垫品牌，都是什么档次#床垫#床垫怎么选#床垫材料#大牌床垫",
+        "link_url": "https://www.iesdouyin.com/share/video/7625214634824692096",
+        "domain": "iesdouyin.com",
+        "platform_name": "抖音",
+        "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/img/27422dd3ce8d2f41b45309e5aeca806b~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=W8ZL8IDW1iYKUjhoHgBVhf82%2BBM%3D",
+        "total_citations": 193,
+        "avg_citations": 8.8,
+        "has_target_product": false
+      },
+      {
+        "rank": 2,
+        "title": "2026年可闭眼可入的5款家用床垫！少花冤枉钱#芭蕉果床垫 #家用床垫 #床垫推荐 #喜临门床垫 #选床攻略",
+        "link_url": "https://www.iesdouyin.com/share/video/7598145719752510772",
+        "domain": "iesdouyin.com",
+        "platform_name": "抖音",
+        "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/img/27422dd3ce8d2f41b45309e5aeca806b~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=W8ZL8IDW1iYKUjhoHgBVhf82%2BBM%3D",
+        "total_citations": 139,
+        "avg_citations": 7.3,
+        "has_target_product": false
+      },
+      {
+        "rank": 3,
+        "title": "《买前必看!2026年6月最新床垫五大品牌排行与大牌选购避坑》#床垫五大品牌 #2026床垫实测 #床垫避坑指南 #护脊床垫选购 #家用床垫怎么选",
+        "link_url": "https://www.iesdouyin.com/share/video/7653685855542063035",
+        "domain": "iesdouyin.com",
+        "platform_name": "抖音",
+        "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/img/27422dd3ce8d2f41b45309e5aeca806b~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=W8ZL8IDW1iYKUjhoHgBVhf82%2BBM%3D",
+        "total_citations": 134,
+        "avg_citations": 6.1,
+        "has_target_product": false
+      },
+      {
+        "rank": 4,
+        "title": "四款 床垫 硬核 实测 ， 谁 才 是 你 的 天 选 神 垫 ？ # 床垫 推荐 # 芭蕉 果 床垫 # 床垫 怎么 选",
+        "link_url": "https://www.iesdouyin.com/share/video/7656016312946232586",
+        "domain": "iesdouyin.com",
+        "platform_name": "抖音",
+        "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/img/27422dd3ce8d2f41b45309e5aeca806b~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=W8ZL8IDW1iYKUjhoHgBVhf82%2BBM%3D",
+        "total_citations": 108,
+        "avg_citations": 7.2,
+        "has_target_product": false
+      },
+      {
+        "rank": 5,
+        "title": "2026年热门床垫评测❗️预算1-5k各个品牌推荐 床垫真的是最容易被低估的大件家具之一 很多人买床垫，只看第一躺舒不舒服，但真正影响长期睡眠的，其实是支撑性、透气性、静音、环保和耐用度。 这次羊羊实",
+        "link_url": "https://www.iesdouyin.com/share/video/7643724513892420916",
+        "domain": "iesdouyin.com",
+        "platform_name": "抖音",
+        "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/img/27422dd3ce8d2f41b45309e5aeca806b~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=W8ZL8IDW1iYKUjhoHgBVhf82%2BBM%3D",
+        "total_citations": 100,
+        "avg_citations": 5.3,
+        "has_target_product": false
+      },
+      {
+        "rank": 6,
+        "title": "2026最新万元智能床实测，慕思/菠萝斑马/舒达/舒福德 万元价位段智能床怎么选？我们实测了2026大热的四款智能床：慕思鸿蒙智选智能床Pro、舒达 ICF AI Max+梦享AI、菠萝斑马黑巧Max",
+        "link_url": "https://www.iesdouyin.com/share/video/7643742429316648201",
+        "domain": "iesdouyin.com",
+        "platform_name": "抖音",
+        "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/img/27422dd3ce8d2f41b45309e5aeca806b~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=W8ZL8IDW1iYKUjhoHgBVhf82%2BBM%3D",
+        "total_citations": 89,
+        "avg_citations": 15.4,
+        "has_target_product": false
+      },
+      {
+        "rank": 7,
+        "title": "舒达、丝涟、金可儿、慕思、席梦思五大高端床垫品牌到底应该怎么选？#床垫 #床垫怎么选 #舒达床垫 #金可儿床垫 #慕思床垫",
+        "link_url": "https://www.iesdouyin.com/share/video/7609122166898381416",
+        "domain": "iesdouyin.com",
+        "platform_name": "抖音",
+        "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/img/27422dd3ce8d2f41b45309e5aeca806b~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=W8ZL8IDW1iYKUjhoHgBVhf82%2BBM%3D",
+        "total_citations": 88,
+        "avg_citations": 4.2,
+        "has_target_product": true
+      },
+      {
+        "rank": 8,
+        "title": "四款3千热门床垫🔍真实测评才给结论 集结了四款3千价位的热门床垫款式 软硬皆有 有卷包、有全拆 还有上班族需要的护脊床垫 走着～一起看看 总能找到一款你需要的 #床垫测评 #蓝盒子床垫 #梦百合床垫",
+        "link_url": "https://www.iesdouyin.com/share/video/7620320135794738683",
+        "domain": "iesdouyin.com",
+        "platform_name": "抖音",
+        "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/img/27422dd3ce8d2f41b45309e5aeca806b~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=W8ZL8IDW1iYKUjhoHgBVhf82%2BBM%3D",
+        "total_citations": 75,
+        "avg_citations": 3,
+        "has_target_product": false
+      },
+      {
+        "rank": 9,
+        "title": "不同预算里的床垫王者品牌有哪些？#床垫怎么选 #喜临门床垫",
+        "link_url": "https://www.iesdouyin.com/share/video/7610382652349179252",
+        "domain": "iesdouyin.com",
+        "platform_name": "抖音",
+        "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/img/27422dd3ce8d2f41b45309e5aeca806b~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=W8ZL8IDW1iYKUjhoHgBVhf82%2BBM%3D",
+        "total_citations": 67,
+        "avg_citations": 3.7,
+        "has_target_product": false
+      },
+      {
+        "rank": 10,
+        "title": "2026 年 ， 能 思考 、 会 哄睡 的 智能 床垫 真 来了 # 喜临门 睡眠 科技 # 喜临门 智能 床垫 # 喜临门 呼呼 发布会",
+        "link_url": "https://www.iesdouyin.com/share/video/7620750143188389135",
+        "domain": "iesdouyin.com",
+        "platform_name": "抖音",
+        "logo_url": "https://p3-spider-image-sign.byteimg.com/isp-i18n-media/img/27422dd3ce8d2f41b45309e5aeca806b~tplv-e9ol9do63j-thumbnail.jpeg?rk3s=feb11e32&x-expires=1775816928&x-signature=W8ZL8IDW1iYKUjhoHgBVhf82%2BBM%3D",
+        "total_citations": 66,
+        "avg_citations": 16.5,
+        "has_target_product": false
+      }
+    ]
+  }
+}

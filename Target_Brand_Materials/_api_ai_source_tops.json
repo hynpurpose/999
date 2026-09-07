@@ -1,0 +1,382 @@
+{
+  "meta": {
+    "projectId": 457,
+    "start": "2026-08-04",
+    "end": "2026-08-04",
+    "fetchedAt": "2026-08-10T12:28:18.603Z"
+  },
+  "platforms": [
+    {
+      "id": 1,
+      "name": "DeepSeek"
+    },
+    {
+      "id": 2,
+      "name": "豆包"
+    },
+    {
+      "id": 3,
+      "name": "元宝"
+    },
+    {
+      "id": 5,
+      "name": "通义千问"
+    }
+  ],
+  "aiTop10": {
+    "DeepSeek": [
+      {
+        "rank": 1,
+        "site": "中国医药信息查询平台",
+        "count": 133,
+        "domain": "dayi.org.cn"
+      },
+      {
+        "rank": 2,
+        "site": "生命时报",
+        "count": 17,
+        "domain": "lifetimes.cn"
+      },
+      {
+        "rank": 3,
+        "site": "丁香园生物医药科技网",
+        "count": 16,
+        "domain": "dxy.cn"
+      },
+      {
+        "rank": 4,
+        "site": "人卫智数",
+        "count": 12,
+        "domain": "pmphai.com"
+      },
+      {
+        "rank": 5,
+        "site": "中国知网",
+        "count": 10,
+        "domain": "cnki.net"
+      },
+      {
+        "rank": 6,
+        "site": "许昌市中心医院",
+        "count": 9,
+        "domain": "xcszxyy.cn"
+      },
+      {
+        "rank": 7,
+        "site": "智慧芽",
+        "count": 9,
+        "domain": "zhihuiya.com"
+      },
+      {
+        "rank": 8,
+        "site": "广州白云山陈李济药厂有限公司",
+        "count": 8,
+        "domain": "gzclj.com.cn"
+      },
+      {
+        "rank": 9,
+        "site": "科普中国",
+        "count": 7,
+        "domain": "kepuchina.cn"
+      },
+      {
+        "rank": 10,
+        "site": "www.nmpa.gov.cn",
+        "count": 7,
+        "domain": "nmpa.gov.cn"
+      }
+    ],
+    "豆包": [
+      {
+        "rank": 1,
+        "site": "小荷健康",
+        "count": 166,
+        "domain": "xiaohe.cn"
+      }
+    ],
+    "元宝": [
+      {
+        "rank": 1,
+        "site": "中国医药信息查询平台",
+        "count": 72,
+        "domain": "dayi.org.cn"
+      },
+      {
+        "rank": 2,
+        "site": "QQ新闻",
+        "count": 70,
+        "domain": "qq.com"
+      },
+      {
+        "rank": 3,
+        "site": "民福康健康",
+        "count": 69,
+        "domain": "39yst.com"
+      },
+      {
+        "rank": 4,
+        "site": "博禾医生",
+        "count": 65,
+        "domain": "bohe.cn"
+      },
+      {
+        "rank": 5,
+        "site": "百度知道",
+        "count": 55,
+        "domain": "baidu.com"
+      },
+      {
+        "rank": 6,
+        "site": "39健康网",
+        "count": 33,
+        "domain": "39.net"
+      },
+      {
+        "rank": 7,
+        "site": "复禾健康",
+        "count": 29,
+        "domain": "fh21.com.cn"
+      },
+      {
+        "rank": 8,
+        "site": "复禾健康",
+        "count": 26,
+        "domain": "fh21.com"
+      },
+      {
+        "rank": 9,
+        "site": "苹果绿养生网",
+        "count": 20,
+        "domain": "pingguolv.com"
+      },
+      {
+        "rank": 10,
+        "site": "民福康",
+        "count": 16,
+        "domain": "mfk.com"
+      }
+    ],
+    "通义千问": [
+      {
+        "rank": 1,
+        "site": "夸克",
+        "count": 189,
+        "domain": "quark.cn"
+      },
+      {
+        "rank": 2,
+        "site": "神马搜索",
+        "count": 101,
+        "domain": "sm.cn"
+      },
+      {
+        "rank": 3,
+        "site": "搜狐网",
+        "count": 28,
+        "domain": "sohu.com"
+      },
+      {
+        "rank": 4,
+        "site": "今日头条",
+        "count": 10,
+        "domain": "toutiao.com"
+      },
+      {
+        "rank": 5,
+        "site": "复禾健康",
+        "count": 9,
+        "domain": "fh21.com"
+      },
+      {
+        "rank": 6,
+        "site": "全民健康网",
+        "count": 9,
+        "domain": "qm120.com"
+      },
+      {
+        "rank": 7,
+        "site": "百度知道",
+        "count": 8,
+        "domain": "baidu.com"
+      },
+      {
+        "rank": 8,
+        "site": "什么值得买社区频道",
+        "count": 7,
+        "domain": "smzdm.com"
+      },
+      {
+        "rank": 9,
+        "site": "全国党媒信息公共平台",
+        "count": 4,
+        "domain": "hubpd.com"
+      },
+      {
+        "rank": 10,
+        "site": "首都医科大学附属北京潞河医院",
+        "count": 4,
+        "domain": "luhehospital.com"
+      }
+    ]
+  },
+  "bFull": {
+    "DeepSeek": [
+      {
+        "rank": 1,
+        "site": "中国医药信息查询平台",
+        "self": 133,
+        "other": 73,
+        "otherMax": 72,
+        "trait": "明显偏好",
+        "tip": "在DeepSeek上重点投放"
+      },
+      {
+        "rank": 2,
+        "site": "生命时报",
+        "self": 17,
+        "other": 4,
+        "otherMax": 4,
+        "trait": "显著偏好（>3倍于其他平台）",
+        "tip": "在DeepSeek上重点投放"
+      },
+      {
+        "rank": 3,
+        "site": "丁香园生物医药科技网",
+        "self": 16,
+        "other": 4,
+        "otherMax": 4,
+        "trait": "显著偏好（>3倍于其他平台）",
+        "tip": "在DeepSeek上重点投放"
+      },
+      {
+        "rank": 4,
+        "site": "人卫智数",
+        "self": 12,
+        "other": 0,
+        "otherMax": 0,
+        "trait": "该平台独有",
+        "tip": "在DeepSeek上重点投放"
+      },
+      {
+        "rank": 5,
+        "site": "中国知网",
+        "self": 10,
+        "other": 0,
+        "otherMax": 0,
+        "trait": "该平台独有",
+        "tip": "在DeepSeek上重点投放"
+      }
+    ],
+    "豆包": [
+      {
+        "rank": 1,
+        "site": "小荷健康",
+        "self": 166,
+        "other": 2,
+        "otherMax": 2,
+        "trait": "显著偏好（>3倍于其他平台）",
+        "tip": "在豆包上重点投放"
+      }
+    ],
+    "元宝": [
+      {
+        "rank": 1,
+        "site": "QQ新闻",
+        "self": 70,
+        "other": 0,
+        "otherMax": 0,
+        "trait": "该平台独有",
+        "tip": "在元宝上重点投放"
+      },
+      {
+        "rank": 2,
+        "site": "民福康健康",
+        "self": 69,
+        "other": 0,
+        "otherMax": 0,
+        "trait": "该平台独有",
+        "tip": "在元宝上重点投放"
+      },
+      {
+        "rank": 3,
+        "site": "博禾医生",
+        "self": 65,
+        "other": 0,
+        "otherMax": 0,
+        "trait": "该平台独有",
+        "tip": "在元宝上重点投放"
+      },
+      {
+        "rank": 4,
+        "site": "百度知道",
+        "self": 55,
+        "other": 8,
+        "otherMax": 8,
+        "trait": "显著偏好（>3倍于其他平台）",
+        "tip": "在元宝上重点投放"
+      },
+      {
+        "rank": 5,
+        "site": "39健康网",
+        "self": 33,
+        "other": 4,
+        "otherMax": 4,
+        "trait": "显著偏好（>3倍于其他平台）",
+        "tip": "在元宝上重点投放"
+      }
+    ],
+    "通义千问": [
+      {
+        "rank": 1,
+        "site": "夸克",
+        "self": 189,
+        "other": 0,
+        "otherMax": 0,
+        "trait": "该平台独有",
+        "tip": "在通义千问上重点投放"
+      },
+      {
+        "rank": 2,
+        "site": "神马搜索",
+        "self": 101,
+        "other": 0,
+        "otherMax": 0,
+        "trait": "该平台独有",
+        "tip": "在通义千问上重点投放"
+      },
+      {
+        "rank": 3,
+        "site": "搜狐网",
+        "self": 28,
+        "other": 15,
+        "otherMax": 12,
+        "trait": "明显偏好",
+        "tip": "在通义千问上重点投放"
+      },
+      {
+        "rank": 4,
+        "site": "全民健康网",
+        "self": 9,
+        "other": 4,
+        "otherMax": 4,
+        "trait": "明显偏好",
+        "tip": "在通义千问上重点投放"
+      },
+      {
+        "rank": 5,
+        "site": "什么值得买社区频道",
+        "self": 7,
+        "other": 0,
+        "otherMax": 0,
+        "trait": "该平台独有",
+        "tip": "在通义千问上重点投放"
+      }
+    ]
+  },
+  "rawTotals": {
+    "DeepSeek": 410,
+    "豆包": 166,
+    "元宝": 706,
+    "通义千问": 414
+  }
+}

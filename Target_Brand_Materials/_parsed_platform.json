@@ -1,0 +1,788 @@
+{
+  "meta": {
+    "brand": "华润三九",
+    "product": "三九养胃舒颗粒",
+    "dateRange": "2026-08-04 ~ 2026-08-04",
+    "exportDate": "2026-08-10",
+    "totalArticles": 1374,
+    "brandTopN": 100,
+    "refBrand": "达喜",
+    "sourceFile": "投放平台量化分析_三九养胃舒颗粒-ToC①_20260804-20260804_P457_20260810_195407.xlsx"
+  },
+  "a5": [
+    {
+      "rank": 1,
+      "site": "中国医药信息查询平台",
+      "total": 205,
+      "coverCount": 2,
+      "cover": "DeepSeek、元宝",
+      "deepseek": 133,
+      "doubao": 0,
+      "yuanbao": 72,
+      "tongyi": 1,
+      "weight": "★★★",
+      "stars": 3
+    },
+    {
+      "rank": 2,
+      "site": "复禾健康",
+      "total": 64,
+      "coverCount": 2,
+      "cover": "元宝、通义千问",
+      "deepseek": 0,
+      "doubao": 0,
+      "yuanbao": 55,
+      "tongyi": 9,
+      "weight": "★★★",
+      "stars": 3
+    },
+    {
+      "rank": 3,
+      "site": "百度知道",
+      "total": 63,
+      "coverCount": 2,
+      "cover": "元宝、通义千问",
+      "deepseek": 0,
+      "doubao": 0,
+      "yuanbao": 55,
+      "tongyi": 8,
+      "weight": "★★★",
+      "stars": 3
+    },
+    {
+      "rank": 4,
+      "site": "39健康网",
+      "total": 37,
+      "coverCount": 2,
+      "cover": "元宝、通义千问",
+      "deepseek": 1,
+      "doubao": 0,
+      "yuanbao": 33,
+      "tongyi": 4,
+      "weight": "★★★",
+      "stars": 3
+    },
+    {
+      "rank": 5,
+      "site": "夸克",
+      "total": 189,
+      "coverCount": 1,
+      "cover": "通义千问",
+      "deepseek": 0,
+      "doubao": 0,
+      "yuanbao": 0,
+      "tongyi": 189,
+      "weight": "★★★",
+      "stars": 2
+    }
+  ],
+  "aiTop10": {
+    "DeepSeek": [
+      {
+        "rank": 1,
+        "site": "中国医药信息查询平台",
+        "count": 133
+      },
+      {
+        "rank": 2,
+        "site": "生命时报",
+        "count": 17
+      },
+      {
+        "rank": 3,
+        "site": "丁香园生物医药科技网",
+        "count": 16
+      },
+      {
+        "rank": 4,
+        "site": "人卫智数",
+        "count": 12
+      },
+      {
+        "rank": 5,
+        "site": "中国知网",
+        "count": 10
+      },
+      {
+        "rank": 6,
+        "site": "智慧芽",
+        "count": 9
+      },
+      {
+        "rank": 7,
+        "site": "许昌市中心医院",
+        "count": 9
+      },
+      {
+        "rank": 8,
+        "site": "广州白云山陈李济药厂有限公司",
+        "count": 8
+      },
+      {
+        "rank": 9,
+        "site": "科普中国",
+        "count": 7
+      },
+      {
+        "rank": 10,
+        "site": "国家药监局",
+        "count": 7
+      }
+    ],
+    "豆包": [
+      {
+        "rank": 1,
+        "site": "小荷健康",
+        "count": 166
+      }
+    ],
+    "元宝": [
+      {
+        "rank": 1,
+        "site": "中国医药信息查询平台",
+        "count": 72
+      },
+      {
+        "rank": 2,
+        "site": "QQ新闻",
+        "count": 70
+      },
+      {
+        "rank": 3,
+        "site": "民福康健康",
+        "count": 69
+      },
+      {
+        "rank": 4,
+        "site": "博禾医生",
+        "count": 65
+      },
+      {
+        "rank": 5,
+        "site": "百度知道",
+        "count": 55
+      },
+      {
+        "rank": 6,
+        "site": "复禾健康",
+        "count": 55
+      },
+      {
+        "rank": 7,
+        "site": "39健康网",
+        "count": 33
+      },
+      {
+        "rank": 8,
+        "site": "苹果绿养生网",
+        "count": 20
+      },
+      {
+        "rank": 9,
+        "site": "民福康",
+        "count": 16
+      },
+      {
+        "rank": 10,
+        "site": "快速问医生",
+        "count": 16
+      }
+    ],
+    "通义千问": [
+      {
+        "rank": 1,
+        "site": "夸克",
+        "count": 189
+      },
+      {
+        "rank": 2,
+        "site": "神马搜索",
+        "count": 101
+      },
+      {
+        "rank": 3,
+        "site": "搜狐网",
+        "count": 28
+      },
+      {
+        "rank": 4,
+        "site": "今日头条",
+        "count": 10
+      },
+      {
+        "rank": 5,
+        "site": "全民健康网",
+        "count": 9
+      },
+      {
+        "rank": 6,
+        "site": "复禾健康",
+        "count": 9
+      },
+      {
+        "rank": 7,
+        "site": "百度知道",
+        "count": 8
+      },
+      {
+        "rank": 8,
+        "site": "什么值得买社区频道",
+        "count": 7
+      },
+      {
+        "rank": 9,
+        "site": "39健康网",
+        "count": 4
+      },
+      {
+        "rank": 10,
+        "site": "首都医科大学附属北京潞河医院",
+        "count": 4
+      }
+    ]
+  },
+  "bFull": {
+    "DeepSeek": [
+      {
+        "rank": 1,
+        "site": "生命时报",
+        "self": 17,
+        "other": 4,
+        "trait": "显著偏好（>3倍于其他平台）",
+        "tip": "在DeepSeek上重点投放"
+      },
+      {
+        "rank": 2,
+        "site": "丁香园生物医药科技网",
+        "self": 16,
+        "other": 4,
+        "trait": "显著偏好（>3倍于其他平台）",
+        "tip": "在DeepSeek上重点投放"
+      },
+      {
+        "rank": 3,
+        "site": "人卫智数",
+        "self": 12,
+        "other": 0,
+        "trait": "该平台独有",
+        "tip": "在DeepSeek上重点投放"
+      },
+      {
+        "rank": 4,
+        "site": "中国知网",
+        "self": 10,
+        "other": 0,
+        "trait": "该平台独有",
+        "tip": "在DeepSeek上重点投放"
+      },
+      {
+        "rank": 5,
+        "site": "智慧芽",
+        "self": 9,
+        "other": 1,
+        "trait": "显著偏好（>3倍于其他平台）",
+        "tip": "在DeepSeek上重点投放"
+      }
+    ],
+    "豆包": [
+      {
+        "rank": 1,
+        "site": "小荷健康",
+        "self": 166,
+        "other": 3,
+        "trait": "显著偏好（>3倍于其他平台）",
+        "tip": "在豆包上重点投放"
+      }
+    ],
+    "元宝": [
+      {
+        "rank": 1,
+        "site": "QQ新闻",
+        "self": 70,
+        "other": 0,
+        "trait": "该平台独有",
+        "tip": "在元宝上重点投放"
+      },
+      {
+        "rank": 2,
+        "site": "民福康健康",
+        "self": 69,
+        "other": 0,
+        "trait": "该平台独有",
+        "tip": "在元宝上重点投放"
+      },
+      {
+        "rank": 3,
+        "site": "博禾医生",
+        "self": 65,
+        "other": 0,
+        "trait": "该平台独有",
+        "tip": "在元宝上重点投放"
+      },
+      {
+        "rank": 4,
+        "site": "苹果绿养生网",
+        "self": 20,
+        "other": 0,
+        "trait": "该平台独有",
+        "tip": "在元宝上重点投放"
+      },
+      {
+        "rank": 5,
+        "site": "民福康",
+        "self": 16,
+        "other": 0,
+        "trait": "该平台独有",
+        "tip": "在元宝上重点投放"
+      }
+    ],
+    "通义千问": [
+      {
+        "rank": 1,
+        "site": "神马搜索",
+        "self": 101,
+        "other": 0,
+        "trait": "该平台独有",
+        "tip": "在通义千问上重点投放"
+      },
+      {
+        "rank": 2,
+        "site": "搜狐网",
+        "self": 28,
+        "other": 15,
+        "trait": "明显偏好",
+        "tip": "在通义千问上重点投放"
+      },
+      {
+        "rank": 3,
+        "site": "今日头条",
+        "self": 10,
+        "other": 7,
+        "trait": "明显偏好",
+        "tip": "在通义千问上重点投放"
+      },
+      {
+        "rank": 4,
+        "site": "全民健康网",
+        "self": 9,
+        "other": 4,
+        "trait": "明显偏好",
+        "tip": "在通义千问上重点投放"
+      },
+      {
+        "rank": 5,
+        "site": "什么值得买社区频道",
+        "self": 7,
+        "other": 1,
+        "trait": "显著偏好（>3倍于其他平台）",
+        "tip": "在通义千问上重点投放"
+      }
+    ]
+  },
+  "bRep": [
+    {
+      "group": "DeepSeek",
+      "items": [
+        {
+          "n": "生命时报",
+          "c": "17"
+        }
+      ]
+    },
+    {
+      "group": "豆包",
+      "items": [
+        {
+          "n": "小荷健康",
+          "c": "166"
+        }
+      ]
+    },
+    {
+      "group": "元宝",
+      "items": [
+        {
+          "n": "QQ新闻",
+          "c": "70"
+        }
+      ]
+    },
+    {
+      "group": "通义千问",
+      "items": [
+        {
+          "n": "神马搜索",
+          "c": "101"
+        }
+      ]
+    }
+  ],
+  "c5": [
+    {
+      "rank": 1,
+      "site": "315价格网",
+      "cites": 5,
+      "hits": 5,
+      "rate": "100.00%",
+      "deepseek": [
+        0,
+        0
+      ],
+      "doubao": [
+        0,
+        0
+      ],
+      "yuanbao": [
+        5,
+        5
+      ],
+      "tongyi": [
+        0,
+        0
+      ],
+      "note": "极高命中率，达喜在此平台强势覆盖"
+    },
+    {
+      "rank": 2,
+      "site": "湖南药事服务网",
+      "cites": 4,
+      "hits": 4,
+      "rate": "100.00%",
+      "deepseek": [
+        0,
+        0
+      ],
+      "doubao": [
+        0,
+        0
+      ],
+      "yuanbao": [
+        4,
+        4
+      ],
+      "tongyi": [
+        0,
+        0
+      ],
+      "note": "极高命中率，达喜在此平台强势覆盖"
+    },
+    {
+      "rank": 3,
+      "site": "国家医疗保障局",
+      "cites": 3,
+      "hits": 3,
+      "rate": "100.00%",
+      "deepseek": [
+        0,
+        0
+      ],
+      "doubao": [
+        0,
+        0
+      ],
+      "yuanbao": [
+        3,
+        3
+      ],
+      "tongyi": [
+        0,
+        0
+      ],
+      "note": "极高命中率，达喜在此平台强势覆盖"
+    },
+    {
+      "rank": 4,
+      "site": "第一三共健康官网",
+      "cites": 3,
+      "hits": 3,
+      "rate": "100.00%",
+      "deepseek": [
+        0,
+        0
+      ],
+      "doubao": [
+        0,
+        0
+      ],
+      "yuanbao": [
+        3,
+        3
+      ],
+      "tongyi": [
+        0,
+        0
+      ],
+      "note": "极高命中率，达喜在此平台强势覆盖"
+    },
+    {
+      "rank": 5,
+      "site": "中国食品药品网",
+      "cites": 3,
+      "hits": 2,
+      "rate": "66.67%",
+      "deepseek": [
+        1,
+        1
+      ],
+      "doubao": [
+        0,
+        0
+      ],
+      "yuanbao": [
+        2,
+        1
+      ],
+      "tongyi": [
+        0,
+        0
+      ],
+      "note": "极高命中率，达喜在此平台强势覆盖"
+    }
+  ],
+  "cats": [
+    {
+      "category": "其他",
+      "leftCount": 48,
+      "leftPct": 48.0,
+      "rightCount": 46,
+      "rightPct": 46.0,
+      "color": "#7B3FA0"
+    },
+    {
+      "category": "知识科普",
+      "leftCount": 28,
+      "leftPct": 28.0,
+      "rightCount": 27,
+      "rightPct": 27.0,
+      "color": "#6B8F3C"
+    },
+    {
+      "category": "排行榜",
+      "leftCount": 17,
+      "leftPct": 17.0,
+      "rightCount": 23,
+      "rightPct": 23.0,
+      "color": "#C65911"
+    },
+    {
+      "category": "行业资讯",
+      "leftCount": 5,
+      "leftPct": 5.0,
+      "rightCount": 3,
+      "rightPct": 3.0,
+      "color": "#3B7FC4"
+    },
+    {
+      "category": "单品介绍",
+      "leftCount": 2,
+      "leftPct": 2.0,
+      "rightCount": 1,
+      "rightPct": 1.0,
+      "color": "#595959"
+    },
+    {
+      "category": "测评",
+      "leftCount": 0,
+      "leftPct": 0.0,
+      "rightCount": 0,
+      "rightPct": 0.0,
+      "color": "#C9A227"
+    }
+  ],
+  "allTop": [
+    {
+      "cites": 11,
+      "cat": "知识科普",
+      "platform": "生命时报",
+      "title": "每种胃病，对症调效果好",
+      "hit": false,
+      "url": "https://www.lifetimes.cn/article/470zon28Yww"
+    },
+    {
+      "cites": 10,
+      "cat": "排行榜",
+      "platform": "搜狐网",
+      "title": "常年胃痛胃胀反复难愈?三款经典中成药,帮你慢慢养好脾胃本源",
+      "hit": false,
+      "url": "https://www.sohu.com/a/1023580872_121948383"
+    },
+    {
+      "cites": 10,
+      "cat": "知识科普",
+      "platform": "许昌市中心医院",
+      "title": "健康科普 +",
+      "hit": false,
+      "url": "http://xcszxyy.cn/jiankangkepu/kepuwenzhang/2024-03-19/1469.html"
+    },
+    {
+      "cites": 8,
+      "cat": "其他",
+      "platform": "博禾医生",
+      "title": "治疗胃炎中成药有哪种",
+      "hit": true,
+      "url": "https://www.bohe.cn/article/view/qkg1vgnu6kmmw61.html"
+    },
+    {
+      "cites": 6,
+      "cat": "知识科普",
+      "platform": "中国医药信息查询平台",
+      "title": "胃纳差吃什么中成药",
+      "hit": false,
+      "url": "https://m.dayi.org.cn/qa/358608.html"
+    },
+    {
+      "cites": 6,
+      "cat": "知识科普",
+      "platform": "神马搜索",
+      "title": "健养胃药物有哪些",
+      "hit": true,
+      "url": "https://page.sm.cn/blm/midpage-317/index?h=m.cndzys.com&id=14_1adb5d124af34767970d6c1516557844"
+    },
+    {
+      "cites": 5,
+      "cat": "其他",
+      "platform": "Cnma",
+      "title": "三十载，匠心铸经典：江中牌健胃消食片第二十一年蝉联中成药消化类第一名",
+      "hit": false,
+      "url": "https://www.cnma.org.cn/nd.jsp?id=2935"
+    },
+    {
+      "cites": 5,
+      "cat": "行业资讯",
+      "platform": "广州白云山陈李济药厂有限公司",
+      "title": "喜报｜陈李济胃疡宁丸入选《慢性胃炎中西医协同诊疗共识意见》",
+      "hit": false,
+      "url": "https://gzclj.com.cn/wap/index.php?ac=article&at=read&did=2696"
+    },
+    {
+      "cites": 5,
+      "cat": "其他",
+      "platform": "中国医药信息查询平台",
+      "title": "蒲元和胃胶囊",
+      "hit": false,
+      "url": "https://m.dayi.org.cn/drug/1023408?from=sm"
+    },
+    {
+      "cites": 5,
+      "cat": "行业资讯",
+      "platform": "丁香园生物医药科技网",
+      "title": "猴头健胃灵片治疗慢性胃炎、消化性溃疡临床应用专家共识",
+      "hit": false,
+      "url": "https://drugs.dxy.cn/pc/clinicalGuidelines/yziEKEROmDiDZpd0FSp3BSQ"
+    },
+    {
+      "cites": 5,
+      "cat": "知识科普",
+      "platform": "神马搜索",
+      "title": "养胃药有哪些中成药？",
+      "hit": true,
+      "url": "https://page.sm.cn/blm/midpage-317/index?h=v1.medical.sm.cn&id=18_67cedd3d1567552e951aaa20bdb35844"
+    },
+    {
+      "cites": 5,
+      "cat": "知识科普",
+      "platform": "中国医药信息查询平台",
+      "title": "养胃舒颗粒怎么样",
+      "hit": false,
+      "url": "https://m.dayi.org.cn/qa/43013.html"
+    }
+  ],
+  "brandDetail": [
+    {
+      "cites": 8,
+      "cat": "其他",
+      "platform": "博禾医生",
+      "title": "治疗胃炎中成药有哪种",
+      "hit": true,
+      "url": "https://www.bohe.cn/article/view/qkg1vgnu6kmmw61.html"
+    },
+    {
+      "cites": 6,
+      "cat": "知识科普",
+      "platform": "神马搜索",
+      "title": "健养胃药物有哪些",
+      "hit": true,
+      "url": "https://page.sm.cn/blm/midpage-317/index?h=m.cndzys.com&id=14_1adb5d124af34767970d6c1516557844"
+    },
+    {
+      "cites": 5,
+      "cat": "知识科普",
+      "platform": "神马搜索",
+      "title": "养胃药有哪些中成药？",
+      "hit": true,
+      "url": "https://page.sm.cn/blm/midpage-317/index?h=v1.medical.sm.cn&id=18_67cedd3d1567552e951aaa20bdb35844"
+    },
+    {
+      "cites": 4,
+      "cat": "排行榜",
+      "platform": "米内网",
+      "title": "34个中成药燃爆百亿市场!扬子江独家产品重夺TOP1,健民新药猛涨147%,华润三九大爆发",
+      "hit": true,
+      "url": "https://www.menet.com.cn/info/202605/2026052709060565_150696.shtml"
+    },
+    {
+      "cites": 4,
+      "cat": "知识科普",
+      "platform": "神马搜索",
+      "title": "养胃药有哪些呢？",
+      "hit": true,
+      "url": "https://page.sm.cn/blm/midpage-317/index?h=m.ilwys.cn&id=16_271a334af147fe9352d5cf3f38ecf90e"
+    },
+    {
+      "cites": 4,
+      "cat": "行业资讯",
+      "platform": "摩熵医药",
+      "title": "重磅！快胃片治疗慢性浅表性胃炎临床应用专家共识发布_摩熵医药",
+      "hit": true,
+      "url": "https://www.pharnexcloud.com/zixun/lcyj_27995"
+    },
+    {
+      "cites": 4,
+      "cat": "其他",
+      "platform": "QQ新闻",
+      "title": "中成药治疗慢性胃炎",
+      "hit": true,
+      "url": "http://mp.weixin.qq.com/s?__biz=MzA5MTA1MjgxMA==&mid=2652337585&idx=8&sn=a690ccb4d905b4b029acbf7e402a7754&chksm=8a920358239951982c988e70ab0bf4478d02bb8f6121cb281a65ee73a76d4977efef95add331#rd"
+    },
+    {
+      "cites": 4,
+      "cat": "其他",
+      "platform": "www.gxzyy.com.cn",
+      "title": "慢性胃炎巧选中成药",
+      "hit": true,
+      "url": "https://www.gxzyy.com.cn/zykp/2012/9aANrlbv.html"
+    },
+    {
+      "cites": 4,
+      "cat": "其他",
+      "platform": "博禾医生",
+      "title": "治疗慢性胃炎的中成药",
+      "hit": true,
+      "url": "https://www.bohe.cn/article/view/5dkhwawjek2f10k.html"
+    },
+    {
+      "cites": 4,
+      "cat": "其他",
+      "platform": "复禾健康",
+      "title": "治疗胃痛的中成药合理使用需要注意什么",
+      "hit": true,
+      "url": "https://www.fh21.com.cn/article/view/7w6ykhwgkruo8f2.html"
+    },
+    {
+      "cites": 3,
+      "cat": "排行榜",
+      "platform": "39健康网",
+      "title": "关注肠胃健康:几款知名养胃产品哪家好,养胃颗粒、生脉饮、养胃产品,养胃产品公司口碑推荐榜",
+      "hit": true,
+      "url": "https://zl.39.net/a/260309/p5wg72i.html"
+    },
+    {
+      "cites": 3,
+      "cat": "其他",
+      "platform": "智慧芽",
+      "title": "独家中成药燃爆胃药市场！扬子江超11亿领先，太极集团再涨148%，华润称霸药店",
+      "hit": true,
+      "url": "https://synapse.zhihuiya.com/news-detail/a5f15a5b-9b50-399b-90ad-7e771feec9ac"
+    }
+  ]
+}

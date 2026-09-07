@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI 提问量数据从哪来 · 中枢架构版</title>
+<style>
+  @font-face { font-family: 'MiSans'; src: url('/fonts/MiSans-Regular.otf') format('opentype'); font-weight: 400; }
+  @font-face { font-family: 'MiSans'; src: url('/fonts/MiSans-Medium.otf') format('opentype'); font-weight: 500; }
+  @font-face { font-family: 'MiSans'; src: url('/fonts/MiSans-Bold.otf') format('opentype'); font-weight: 700; }
+  @font-face { font-family: 'MiSans'; src: url('/fonts/MiSans-Heavy.otf') format('opentype'); font-weight: 900; }
+  @font-face { font-family: 'AlimamaShuHeiTi'; src: url('/fonts/AlimamaShuHeiTi.ttf') format('truetype'); font-weight: 700; }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; background: #000; overflow: hidden; font-family: 'MiSans', sans-serif; }
+
+  #stage {
+    position: absolute; width: 1920px; height: 1080px;
+    left: 50%; top: 50%; transform-origin: center center;
+    background: #000;
+  }
+
+  h1 {
+    position: absolute; top: 112px; left: 40px;
+    font-family: 'AlimamaShuHeiTi', sans-serif;
+    font-size: 86px; line-height: 96px; font-weight: 700;
+    color: #FFF; letter-spacing: 0.02em;
+  }
+
+  .lede {
+    position: absolute; top: 232px; left: 40px; width: 1840px;
+    font-size: 22px; line-height: 32px; color: #A1A1AA; font-weight: 500;
+  }
+  .lede strong { color: #FFF; font-weight: 700; }
+
+  /* ── 大容器（中枢式架构） ── */
+  #frame {
+    position: absolute; top: 292px; left: 40px;
+    width: 1840px; height: 700px;
+    border: 1px solid rgba(0, 76, 229, 0.4);
+    border-radius: 24px;
+    background: rgba(8, 8, 11, 0.5);
+    box-shadow: 0 0 30px rgba(0, 76, 229, 0.15);
+    padding: 34px 32px 28px;
+    display: flex; align-items: stretch; gap: 18px;
+  }
+  #frame .frame-tag {
+    position: absolute; top: -17px; left: 50%; transform: translateX(-50%);
+    background: #000; padding: 4px 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  #frame .frame-tag .dot {
+    width: 12px; height: 12px; border-radius: 50%;
+    background: #004CE5; box-shadow: 0 0 10px #004CE5;
+  }
+  #frame .frame-tag span { font-size: 24px; font-weight: 700; color: #FFF; letter-spacing: 0.06em; }
+
+  .col { display: flex; flex-direction: column; }
+  .col-head {
+    font-size: 20px; font-weight: 700; color: #A1A1AA;
+    margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+  }
+  .col-head::before {
+    content: ''; width: 6px; height: 20px; border-radius: 3px; background: #52525B;
+  }
+  .col-head.blue { color: #60A5FA; }
+  .col-head.blue::before { background: #004CE5; }
+
+  .cells { flex: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 10px; }
+  .cell {
+    flex: 1; background: #111115; border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px; padding: 0 20px;
+    display: flex; flex-direction: column; justify-content: center; gap: 3px;
+  }
+  .cell .c-main { font-size: 21px; font-weight: 700; color: #F4F4F5; display: flex; align-items: center; gap: 10px; }
+  .cell .c-main .b { width: 10px; height: 10px; border-radius: 50%; background: #52525B; flex-shrink: 0; }
+  .cell .c-sub { font-size: 15px; color: #71717A; padding-left: 20px; }
+
+  /* 箭头 */
+  .chev { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; flex-shrink: 0; width: 60px; }
+  .chev svg { width: 32px; height: 32px; }
+  .chev .c-lab { font-size: 15px; font-weight: 700; color: #6D9BFF; text-align: center; line-height: 20px; }
+  .chev .c-money { font-size: 14px; font-weight: 700; color: #34D399; }
+
+  /* 中央核心（渐变蓝） */
+  .core {
+    flex: 1; border-radius: 18px;
+    background: linear-gradient(to bottom, #003bb3, #001430);
+    border: 1px solid rgba(96, 165, 250, 0.4);
+    box-shadow: 0 0 40px rgba(0, 76, 229, 0.3);
+    padding: 22px 24px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .core .core-kicker { font-size: 14px; font-weight: 700; color: rgba(191, 219, 254, 0.7); letter-spacing: 0.3em; text-align: center; }
+  .core .core-title { font-size: 27px; font-weight: 900; color: #FFF; text-align: center; margin-top: 2px; }
+  .core .core-steps { display: flex; flex-direction: column; gap: 9px; margin-top: 14px; flex: 1; justify-content: space-between; }
+  .core .step {
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px; padding: 10px 16px; text-align: center;
+  }
+  .core .step .s-t { font-size: 21px; font-weight: 700; color: #FFF; }
+  .core .step .s-d { font-size: 15px; color: rgba(219, 234, 254, 0.7); margin-top: 2px; }
+  .core .down { display: flex; justify-content: center; }
+  .core .down svg { width: 22px; height: 22px; color: rgba(147, 197, 253, 0.8); }
+
+  /* 结果列 */
+  .res-card {
+    flex: 1; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px; padding: 12px 18px;
+    display: flex; flex-direction: column; justify-content: center; gap: 8px;
+  }
+  .vol-row { display: flex; align-items: center; gap: 8px; }
+  .vol-row .v-label { width: 128px; font-size: 15px; color: #D4D4D8; text-align: right; flex-shrink: 0; white-space: nowrap; }
+  .vol-row .v-track { flex: 1; height: 13px; background: #1D1D22; border-radius: 3px; overflow: hidden; }
+  .vol-row .v-fill { height: 100%; display: block; background: linear-gradient(to right, #0038AB, #2E6BFF); border-radius: 3px; }
+  .vol-row .v-num { width: 80px; font-size: 14px; color: #6D9BFF; font-weight: 700; flex-shrink: 0; }
+  .vol-row.dim .v-fill { background: #33333B; }
+  .vol-row.dim .v-num { color: #71717A; font-weight: 400; }
+  .vol-row.dim .v-label { color: #8E8E99; }
+
+  .pick-row {
+    border: 1px solid #27272A; border-radius: 9px; padding: 8px 14px;
+    font-size: 17px; color: #C9C9D1;
+    display: flex; justify-content: space-between; gap: 8px; align-items: center;
+  }
+  .pick-row .tag { font-size: 14px; color: #71717A; flex-shrink: 0; }
+  .pick-row.win { border-color: #2E6BFF; background: rgba(0, 76, 229, 0.12); }
+  .pick-row.win .tag { color: #6D9BFF; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div id="stage">
+  <h1>AI 提问量数据从哪来？</h1>
+
+  <div class="lede">
+    几百万真实用户的日常工具把 AI 对话记下来，数据商清洗打包出售，Profound 买回来数一数——<strong>我们再把这份数据买过来，选词就有了地基</strong>。
+  </div>
+
+  <div id="frame">
+    <div class="frame-tag"><div class="dot"></div><span>一条买来的数据链</span></div>
+
+    <!-- 列一：数据入口 -->
+    <div class="col" style="width: 330px; flex-shrink: 0;">
+      <div class="col-head">数据入口 · 用户的日常工具</div>
+      <div class="cells">
+        <div class="cell">
+          <div class="c-main"><span class="b"></span>&#128737;&#65039; 免费 VPN</div>
+          <div class="c-sub">浏览器插件 · 可读所有网页</div>
+        </div>
+        <div class="cell">
+          <div class="c-main"><span class="b"></span>&#9940; 广告拦截器</div>
+          <div class="c-sub">浏览器插件 · 可读所有网页</div>
+        </div>
+        <div class="cell">
+          <div class="c-main"><span class="b"></span>&#9000;&#65039; 输入法</div>
+          <div class="c-sub">键盘应用 · 记录输入内容</div>
+        </div>
+        <div class="cell">
+          <div class="c-main"><span class="b"></span>&#10024; AI 助手侧边栏</div>
+          <div class="c-sub">浏览器插件 · 直连对话页面</div>
+        </div>
+        <div class="cell" style="border-color: rgba(46,107,255,0.5); background: rgba(0,76,229,0.08);">
+          <div class="c-main" style="color:#E3ECFF">安装时点的「同意」= 授权</div>
+          <div class="c-sub" style="color:#6D9BFF">用户与 AI 的对话就此被记录</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chev">
+      <svg fill="none" viewBox="0 0 24 24" stroke="#004CE5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
+      <div class="c-lab">抓取<br/>上传</div>
+    </div>
+
+    <!-- 列二：数据商 + Profound 核心 -->
+    <div class="col" style="width: 370px; flex-shrink: 0;">
+      <div class="col-head">数据商 · Datos / BiScience</div>
+      <div class="cells">
+        <div class="cell">
+          <div class="c-main"><span class="b"></span>汇集海量原始对话</div>
+          <div class="c-sub">从成百上千个插件持续回收</div>
+        </div>
+        <div class="cell">
+          <div class="c-main"><span class="b"></span>去除个人身份信息</div>
+          <div class="c-sub">只留问题本身，不留人</div>
+        </div>
+        <div class="cell">
+          <div class="c-main"><span class="b"></span>匿名化 · 打包成商品</div>
+          <div class="c-sub">按月出售给任何愿意付钱的买家</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chev">
+      <svg fill="none" viewBox="0 0 24 24" stroke="#004CE5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
+      <div class="c-lab">授权<br/>出售</div>
+      <div class="c-money">&#8593; $ 付费</div>
+    </div>
+
+    <!-- 列三：Profound 核心 -->
+    <div class="core" style="width: 380px; flex: none;">
+      <div>
+        <div class="core-kicker">PROFOUND</div>
+        <div class="core-title">花钱买数据，数出提问量</div>
+      </div>
+      <div class="core-steps">
+        <div class="step">
+          <div class="s-t">买入真实对话</div>
+          <div class="s-d">每月数千万条 · 自己不采集</div>
+        </div>
+        <div class="down"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"/></svg></div>
+        <div class="step">
+          <div class="s-t">统计建模校正偏差</div>
+          <div class="s-d">从样本还原全人群</div>
+        </div>
+        <div class="down"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"/></svg></div>
+        <div class="step">
+          <div class="s-t">每类问题被问多少次</div>
+          <div class="s-d">每周更新 · 逐条可查</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chev">
+      <svg fill="none" viewBox="0 0 24 24" stroke="#004CE5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
+      <div class="c-lab">购买<br/>数据</div>
+      <div class="c-money">&#8593; $ 付费</div>
+    </div>
+
+    <!-- 列四：我们 -->
+    <div class="col" style="flex: 1;">
+      <div class="col-head blue">我们 · 买同一份数据来选词</div>
+      <div class="cells">
+        <div class="res-card">
+          <div class="vol-row">
+            <span class="v-label">好看的电视</span>
+            <span class="v-track"><span class="v-fill" style="width:96%"></span></span>
+            <span class="v-num">8,200/月</span>
+          </div>
+          <div class="vol-row">
+            <span class="v-label">画质好的电视</span>
+            <span class="v-track"><span class="v-fill" style="width:62%"></span></span>
+            <span class="v-num">5,100/月</span>
+          </div>
+          <div class="vol-row dim">
+            <span class="v-label">设计外观好的电视</span>
+            <span class="v-track"><span class="v-fill" style="width:12%"></span></span>
+            <span class="v-num">310/月</span>
+          </div>
+          <div class="vol-row dim">
+            <span class="v-label">防蓝光电视</span>
+            <span class="v-track"><span class="v-fill" style="width:8%"></span></span>
+            <span class="v-num">190/月</span>
+          </div>
+        </div>
+        <div class="res-card" style="gap:9px">
+          <div class="pick-row win"><span>&#10003; 好看的电视推荐</span><span class="tag">量大 · 优先做</span></div>
+          <div class="pick-row"><span>设计外观好的电视</span><span class="tag">被上面覆盖</span></div>
+          <div class="pick-row"><span>&#10007; 安装方便的电视</span><span class="tag">痛点词 · 不做</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const stage = document.getElementById('stage');
+    function fit() {
+      const s = Math.min(innerWidth / 1920, innerHeight / 1080);
+      stage.style.transform = 'translate(-50%, -50%) scale(' + s + ')';
+    }
+    addEventListener('resize', fit); fit();
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI 提问量数据从哪来 · 大字步骤版</title>
+<style>
+  @font-face { font-family: 'MiSans'; src: url('/fonts/MiSans-Regular.otf') format('opentype'); font-weight: 400; }
+  @font-face { font-family: 'MiSans'; src: url('/fonts/MiSans-Medium.otf') format('opentype'); font-weight: 500; }
+  @font-face { font-family: 'MiSans'; src: url('/fonts/MiSans-Bold.otf') format('opentype'); font-weight: 700; }
+  @font-face { font-family: 'MiSans'; src: url('/fonts/MiSans-Heavy.otf') format('opentype'); font-weight: 900; }
+  @font-face { font-family: 'AlimamaShuHeiTi'; src: url('/fonts/AlimamaShuHeiTi.ttf') format('truetype'); font-weight: 700; }
+  @font-face { font-family: 'Montserrat'; src: url('/fonts/Montserrat-Bold.woff2') format('woff2'); font-weight: 700; }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; background: #000; overflow: hidden; font-family: 'MiSans', sans-serif; }
+
+  #stage {
+    position: absolute; width: 1920px; height: 1080px;
+    left: 50%; top: 50%; transform-origin: center center;
+    background: #000;
+  }
+
+  h1 {
+    position: absolute; top: 112px; left: 40px;
+    font-family: 'AlimamaShuHeiTi', sans-serif;
+    font-size: 86px; line-height: 96px; font-weight: 700;
+    color: #FFF; letter-spacing: 0.02em;
+  }
+
+  /* ── 四步竖排大字 ── */
+  #steps {
+    position: absolute; top: 265px; left: 40px;
+    width: 1130px; height: 700px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+
+  .step { display: flex; align-items: flex-start; gap: 30px; position: relative; }
+  .step .num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62px; font-weight: 700; line-height: 1;
+    color: #27272A; flex-shrink: 0; width: 110px;
+    padding-top: 4px;
+  }
+  .step.on .num { color: #004CE5; }
+  .step .body { flex: 1; }
+  .step .s-title {
+    font-size: 34px; font-weight: 700; color: #FFF; line-height: 44px;
+    margin-bottom: 8px;
+  }
+  .step .s-title .chip {
+    display: inline-block; vertical-align: 6px;
+    font-size: 17px; font-weight: 700; color: #6D9BFF;
+    border: 1.5px solid rgba(46, 107, 255, 0.5); background: rgba(0, 76, 229, 0.1);
+    border-radius: 999px; padding: 3px 14px; margin-left: 14px;
+  }
+  .step .s-desc { font-size: 21px; line-height: 32px; color: #A1A1AA; }
+  .step .s-desc strong { color: #FFF; font-weight: 700; }
+  .step .s-desc .money { color: #34D399; font-weight: 700; }
+
+  /* 步骤间的连接线 */
+  .step::after {
+    content: ''; position: absolute; left: 24px; top: 76px;
+    width: 2px; height: 68px;
+    background: linear-gradient(to bottom, #27272A, transparent);
+  }
+  .step:last-child::after { display: none; }
+
+  /* ── 右侧：证据卡 ── */
+  #proof {
+    position: absolute; top: 265px; left: 1250px;
+    width: 630px; height: 700px;
+    display: flex; flex-direction: column; gap: 24px;
+  }
+  .p-card {
+    flex: 1;
+    background: rgba(24, 24, 27, 0.6); border: 1px solid #27272A;
+    border-radius: 20px; padding: 26px 30px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .p-card.hl { border-color: rgba(46, 107, 255, 0.6); box-shadow: 0 0 40px rgba(0, 76, 229, 0.15); }
+  .p-card .p-head {
+    font-size: 19px; font-weight: 700; color: #71717A; letter-spacing: 0.1em;
+    margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+  }
+  .p-card .p-head::before { content: ''; width: 6px; height: 18px; border-radius: 3px; background: #004CE5; }
+
+  .tools { display: flex; flex-wrap: wrap; gap: 10px; }
+  .tool {
+    border: 1.5px solid #2E6BFF; background: rgba(0,76,229,0.12);
+    border-radius: 10px; padding: 10px 18px;
+    font-size: 20px; font-weight: 700; color: #E3ECFF;
+  }
+  .tool small { display: block; font-size: 13px; font-weight: 400; color: #6D9BFF; margin-top: 2px; }
+
+  .vol { display: flex; flex-direction: column; gap: 12px; }
+  .vol-row { display: flex; align-items: center; gap: 10px; }
+  .vol-row .v-label { width: 150px; font-size: 17px; color: #D4D4D8; text-align: right; flex-shrink: 0; white-space: nowrap; }
+  .vol-row .v-track { flex: 1; height: 16px; background: #1D1D22; border-radius: 4px; overflow: hidden; }
+  .vol-row .v-fill { height: 100%; display: block; background: linear-gradient(to right, #0038AB, #2E6BFF); border-radius: 4px; }
+  .vol-row .v-num { width: 92px; font-size: 15px; color: #6D9BFF; font-weight: 700; flex-shrink: 0; }
+  .vol-row.dim .v-fill { background: #33333B; }
+  .vol-row.dim .v-num { color: #71717A; font-weight: 400; }
+  .vol-row.dim .v-label { color: #8E8E99; }
+
+  .pick { display: flex; flex-direction: column; gap: 10px; }
+  .pick-row {
+    border: 1px solid #27272A; border-radius: 10px; padding: 11px 16px;
+    font-size: 19px; color: #C9C9D1;
+    display: flex; justify-content: space-between; gap: 8px; align-items: center;
+  }
+  .pick-row .tag { font-size: 15px; color: #71717A; flex-shrink: 0; }
+  .pick-row.win { border-color: #2E6BFF; background: rgba(0, 76, 229, 0.12); }
+  .pick-row.win .tag { color: #6D9BFF; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div id="stage">
+  <h1>AI 提问量数据从哪来？</h1>
+
+  <div id="steps">
+    <div class="step on">
+      <div class="num">01</div>
+      <div class="body">
+        <div class="s-title">用户的日常工具在记录对话<span class="chip">数百万真实用户</span></div>
+        <div class="s-desc">免费 VPN、广告拦截器、输入法、AI 助手——安装时点的「同意」，授权它们<strong>读取网页内容和键盘输入</strong>，与 AI 的每条对话就此被记下。</div>
+      </div>
+    </div>
+
+    <div class="step on">
+      <div class="num">02</div>
+      <div class="body">
+        <div class="s-title">数据商回收、清洗、打包出售<span class="chip">Datos / BiScience</span></div>
+        <div class="s-desc">从成百上千个插件汇集原始对话，<strong>去除个人身份信息、匿名化</strong>，做成标准数据商品，按月卖给任何愿意付钱的买家。</div>
+      </div>
+    </div>
+
+    <div class="step on">
+      <div class="num">03</div>
+      <div class="body">
+        <div class="s-title">Profound 花钱买回来，数一数<span class="chip">每月数千万条</span></div>
+        <div class="s-desc">它自己不采集，<span class="money">$ 付费购买</span>真实对话，统计建模校正人群偏差，算出<strong>每类问题被问了多少次</strong>，每周更新。</div>
+      </div>
+    </div>
+
+    <div class="step on">
+      <div class="num">04</div>
+      <div class="body">
+        <div class="s-title">我们买下同一份数据，替客户选词</div>
+        <div class="s-desc">和 Profound 向数据商买数据是<strong>同一条链上的同一种买法</strong>——哪个词用户真的在问、问得多，<strong>数据说了算</strong>，不靠拍脑袋。</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="proof">
+    <div class="p-card">
+      <div class="p-head">数据入口 · 都是用户天天在用的</div>
+      <div class="tools">
+        <span class="tool">&#128737;&#65039; 免费 VPN<small>浏览器插件</small></span>
+        <span class="tool">&#9940; 广告拦截器<small>浏览器插件</small></span>
+        <span class="tool">&#9000;&#65039; 输入法<small>键盘应用</small></span>
+        <span class="tool">&#10024; AI 助手侧边栏<small>浏览器插件</small></span>
+      </div>
+    </div>
+
+    <div class="p-card hl">
+      <div class="p-head">买到的数据长这样 · 真实提问量</div>
+      <div class="vol">
+        <div class="vol-row">
+          <span class="v-label">好看的电视</span>
+          <span class="v-track"><span class="v-fill" style="width:96%"></span></span>
+          <span class="v-num">8,200/月</span>
+        </div>
+        <div class="vol-row">
+          <span class="v-label">画质好的电视</span>
+          <span class="v-track"><span class="v-fill" style="width:62%"></span></span>
+          <span class="v-num">5,100/月</span>
+        </div>
+        <div class="vol-row dim">
+          <span class="v-label">设计外观好的电视</span>
+          <span class="v-track"><span class="v-fill" style="width:12%"></span></span>
+          <span class="v-num">310/月</span>
+        </div>
+        <div class="vol-row dim">
+          <span class="v-label">防蓝光电视</span>
+          <span class="v-track"><span class="v-fill" style="width:8%"></span></span>
+          <span class="v-num">190/月</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-card">
+      <div class="p-head">落到选词 · 数据说了算</div>
+      <div class="pick">
+        <div class="pick-row win"><span>&#10003; 好看的电视推荐</span><span class="tag">量大 · 优先做</span></div>
+        <div class="pick-row"><span>设计外观好的电视</span><span class="tag">被上面覆盖</span></div>
+        <div class="pick-row"><span>&#10007; 安装方便的电视</span><span class="tag">痛点词 · 不做</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const stage = document.getElementById('stage');
+    function fit() {
+      const s = Math.min(innerWidth / 1920, innerHeight / 1080);
+      stage.style.transform = 'translate(-50%, -50%) scale(' + s + ')';
+    }
+    addEventListener('resize', fit); fit();
+  })();
+</script>
+</body>
+</html>

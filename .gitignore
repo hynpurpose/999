@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+.claude/
+
+# Build output
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+
+# Presentation files
+Presentation_2026.pptx
+
+# Temp artifacts (外部生成，勿跟踪 / 勿监听)
+_tmp_*/
+tmp/
+*.pptx
+export-screenshots/
+export-screenshots-videos/
+_pptx_inspect/
+
+# External binaries
+ngrok.exe
+
+

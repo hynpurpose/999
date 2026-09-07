@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI 提问量数据从哪来 · 数据链路</title>
+<style>
+  @font-face {
+    font-family: 'MiSans';
+    src: url('/fonts/MiSans-Regular.otf') format('opentype');
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: 'MiSans';
+    src: url('/fonts/MiSans-Medium.otf') format('opentype');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'MiSans';
+    src: url('/fonts/MiSans-Bold.otf') format('opentype');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'AlimamaShuHeiTi';
+    src: url('/fonts/AlimamaShuHeiTi.ttf') format('truetype');
+    font-weight: 700;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 100%; height: 100%;
+    background: #09090B;
+    overflow: hidden;
+    font-family: 'MiSans', sans-serif;
+    color: #A1A1AA;
+  }
+
+  /* ── 1920x1080 固定舞台，等比缩放适配窗口 ── */
+  #stage {
+    position: absolute;
+    width: 1920px; height: 1080px;
+    left: 50%; top: 50%;
+    transform-origin: center center;
+    background:
+      radial-gradient(ellipse 1200px 600px at 50% -10%, rgba(0, 76, 229, 0.08), transparent 60%),
+      #09090B;
+  }
+
+  /* ── 顶部标题 ── */
+  .header { position: absolute; top: 64px; left: 80px; right: 80px; }
+  .header .kicker {
+    font-size: 20px; letter-spacing: 6px; color: #52525B; font-weight: 500;
+    margin-bottom: 14px;
+  }
+  .header h1 {
+    font-family: 'AlimamaShuHeiTi', sans-serif;
+    font-size: 64px; line-height: 74px; color: #FFF; font-weight: 700;
+  }
+  .header h1 .accent { color: #2E6BFF; }
+
+  /* ── 中部管线场景 ── */
+  #scene {
+    position: absolute; top: 280px; left: 80px;
+    width: 1760px; height: 590px;
+  }
+
+  .node {
+    position: absolute; top: 0;
+    width: 340px; height: 560px;
+    background: rgba(24, 24, 27, 0.6);
+    border: 1.5px solid #3A3A42;
+    border-radius: 20px;
+    padding: 28px 26px 24px;
+    display: flex; flex-direction: column;
+  }
+  .node.focus {
+    border-color: #2E6BFF;
+    box-shadow: 0 0 60px rgba(0, 76, 229, 0.22), inset 0 0 40px rgba(0, 76, 229, 0.05);
+  }
+
+  .node .n-step {
+    align-self: flex-start;
+    font-size: 17px; font-weight: 700; color: #FFF;
+    background: #004CE5; border-radius: 999px; padding: 4px 16px;
+    margin-bottom: 14px; letter-spacing: 2px;
+  }
+  .node h3 { font-size: 30px; color: #FFF; font-weight: 700; line-height: 38px; margin-bottom: 6px; }
+  .node .n-sub { font-size: 18px; line-height: 26px; color: #71717A; margin-bottom: 18px; }
+  .node .n-viz { flex: 1; position: relative; }
+  .node .n-note {
+    margin-top: 16px;
+    font-size: 16px; line-height: 24px; color: #A1A1AA;
+  }
+  .node .n-note strong { color: #FFF; font-weight: 700; }
+
+  #node-user    { left: 0; }
+  #node-broker  { left: 473px; }
+  #node-profound{ left: 946px; }
+  #node-us      { left: 1420px; }
+
+  /* ── 节点间箭头通道 ── */
+  .pipe {
+    position: absolute; top: 235px; height: 4px; width: 125px;
+    background: #004CE5; border-radius: 2px;
+  }
+  .pipe::after {
+    content: ''; position: absolute; right: -2px; top: 50%;
+    transform: translateY(-50%);
+    border-left: 14px solid #004CE5;
+    border-top: 9px solid transparent; border-bottom: 9px solid transparent;
+  }
+  .pipe .pipe-label {
+    position: absolute; bottom: 18px; width: 125px; left: 50%; transform: translateX(-50%);
+    text-align: center; font-size: 16px; line-height: 22px; color: #6D9BFF; font-weight: 700;
+  }
+  .pipe .pipe-label-under {
+    position: absolute; top: 16px; width: 125px; left: 50%; transform: translateX(-50%);
+    text-align: center; font-size: 14px; line-height: 19px; color: #71717A; font-weight: 400;
+  }
+
+  #pipe-1 { left: 344px; }
+  #pipe-2 { left: 817px; }
+  #pipe-3 { left: 1291px; }
+
+  /* 回流的钱箭头（买方 → 卖方） */
+  .money-pipe {
+    position: absolute; top: 360px; height: 4px; width: 125px;
+    background: #1F8A5B; border-radius: 2px;
+  }
+  .money-pipe::after {
+    content: ''; position: absolute; left: -2px; top: 50%;
+    transform: translateY(-50%);
+    border-right: 14px solid #1F8A5B;
+    border-top: 9px solid transparent; border-bottom: 9px solid transparent;
+  }
+  .money-pipe .m-label {
+    position: absolute; top: 16px; width: 125px; left: 50%; transform: translateX(-50%);
+    text-align: center; font-size: 15px; color: #34D399; font-weight: 700;
+  }
+  #money-1 { left: 817px; }
+  #money-2 { left: 1291px; }
+
+  /* ── 节点 1：数据入口徽章 ── */
+  .entry-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+    margin-bottom: 14px;
+  }
+  .entry {
+    border: 1.5px solid #2E6BFF; background: rgba(0, 76, 229, 0.12);
+    border-radius: 10px; padding: 8px 6px;
+    display: flex; flex-direction: column; align-items: center; gap: 3px;
+  }
+  .entry .e-icon { font-size: 20px; line-height: 1; }
+  .entry .e-name { font-size: 15px; font-weight: 700; color: #E3ECFF; }
+  .entry .e-tag { font-size: 12px; color: #6D9BFF; }
+
+  /* 浏览器窗口（静态） */
+  .browser {
+    width: 100%;
+    background: #131316; border: 1px solid #303036; border-radius: 12px;
+    overflow: hidden;
+  }
+  .browser .bar {
+    height: 30px; background: #1C1C21; display: flex; align-items: center;
+    padding: 0 10px; gap: 6px; border-bottom: 1px solid #2A2A30;
+  }
+  .browser .dot { width: 9px; height: 9px; border-radius: 50%; background: #3F3F46; }
+  .browser .url {
+    flex: 1; height: 18px; background: #26262C; border-radius: 5px;
+    font-size: 12px; color: #8E8E99; display: flex; align-items: center; padding: 0 9px;
+  }
+  .chat { padding: 10px 12px; display: flex; flex-direction: column; gap: 7px; }
+  .bubble {
+    max-width: 90%; font-size: 14px; line-height: 20px;
+    padding: 6px 11px; border-radius: 9px;
+  }
+  .bubble.q { align-self: flex-end; background: #004CE5; color: #FFF; border-bottom-right-radius: 3px; }
+  .bubble.a { align-self: flex-start; background: #232329; color: #C9C9D1; border-bottom-left-radius: 3px; }
+
+  /* ── 节点 2：漏斗 ── */
+  .funnel-wrap {
+    height: 100%; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 12px;
+  }
+  .funnel { width: 210px; height: 96px; position: relative; }
+  .funnel .f-top {
+    position: absolute; top: 0; left: 0; right: 0; height: 30px;
+    background: rgba(46,107,255,0.14); border: 1.5px solid #2E6BFF;
+    border-radius: 8px 8px 3px 3px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; color: #B9C6EE;
+  }
+  .funnel .f-mid {
+    position: absolute; top: 34px; left: 36px; right: 36px; height: 26px;
+    background: rgba(46,107,255,0.2); border: 1.5px solid #2E6BFF;
+    border-radius: 3px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; color: #C3CDEF;
+  }
+  .funnel .f-bot {
+    position: absolute; top: 64px; left: 66px; right: 66px; height: 28px;
+    background: rgba(46,107,255,0.3); border: 1.5px solid #2E6BFF;
+    border-radius: 3px 3px 8px 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; color: #DCE4FA;
+  }
+  .pkg-box {
+    border: 1.5px dashed #34D399; border-radius: 10px;
+    padding: 8px 16px; font-size: 15px; color: #B9F3D8;
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  /* ── 节点 3：柱状图 ── */
+  .chart {
+    height: 100%; display: flex; flex-direction: column;
+    justify-content: center; gap: 18px;
+  }
+  .bar-item { display: flex; flex-direction: column; gap: 5px; }
+  .bar-item .b-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .bar-item .b-label { font-size: 15px; color: #E4E4E7; font-weight: 500; }
+  .bar-item .b-val { font-size: 14px; color: #6D9BFF; font-weight: 700; }
+  .bar-item .b-track { height: 18px; background: #1D1D22; border-radius: 4px; overflow: hidden; }
+  .bar-item .b-fill {
+    height: 100%; border-radius: 4px;
+    background: linear-gradient(to right, #0038AB, #2E6BFF);
+  }
+  .bar-item.dim .b-label { color: #8E8E99; font-weight: 400; }
+  .bar-item.dim .b-val { color: #71717A; font-weight: 400; }
+  .bar-item.dim .b-fill { background: #33333B; }
+
+  /* ── 节点 4：选词结论 ── */
+  .pick { height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+  .pick-row {
+    border: 1.5px solid #27272A; border-radius: 10px; padding: 10px 14px;
+    font-size: 16px; color: #C9C9D1;
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+  }
+  .pick-row .tag { font-size: 14px; color: #71717A; flex-shrink: 0; }
+  .pick-row.win { border-color: #2E6BFF; background: rgba(0, 76, 229, 0.12); }
+  .pick-row.win .tag { color: #6D9BFF; font-weight: 700; }
+
+  /* ── 底部总结条 ── */
+  #summary {
+    position: absolute; left: 80px; right: 80px; bottom: 88px;
+    border-left: 6px solid #004CE5;
+    padding: 6px 0 6px 28px;
+    font-size: 26px; line-height: 40px; color: #D4D4D8;
+  }
+  #summary strong { color: #FFF; font-weight: 700; }
+  #summary .hl { color: #6D9BFF; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<div id="stage">
+  <div class="header">
+    <div class="kicker">GEO · 数据地基</div>
+    <h1>AI 提问量数据从哪来？<span class="accent">一条买来的数据链</span></h1>
+  </div>
+
+  <div id="scene">
+    <!-- 节点 1：用户的浏览器与常用工具 -->
+    <div class="node focus" id="node-user">
+      <span class="n-step">第 1 环 · 数据入口</span>
+      <h3>用户的日常工具</h3>
+      <div class="n-sub">数百万真实用户，边用 AI 边被记录</div>
+      <div class="n-viz">
+        <div class="entry-grid">
+          <div class="entry">
+            <span class="e-icon">&#128737;&#65039;</span>
+            <span class="e-name">免费 VPN</span>
+            <span class="e-tag">浏览器插件</span>
+          </div>
+          <div class="entry">
+            <span class="e-icon">&#9940;</span>
+            <span class="e-name">广告拦截器</span>
+            <span class="e-tag">浏览器插件</span>
+          </div>
+          <div class="entry">
+            <span class="e-icon">&#9000;&#65039;</span>
+            <span class="e-name">输入法</span>
+            <span class="e-tag">键盘应用</span>
+          </div>
+          <div class="entry">
+            <span class="e-icon">&#10024;</span>
+            <span class="e-name">AI 助手侧边栏</span>
+            <span class="e-tag">浏览器插件</span>
+          </div>
+        </div>
+        <div class="browser">
+          <div class="bar">
+            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            <div class="url">chatgpt.com</div>
+          </div>
+          <div class="chat">
+            <div class="bubble q">好看的电视推荐？</div>
+            <div class="bubble a">推荐这几款壁纸电视：……</div>
+          </div>
+        </div>
+      </div>
+      <div class="n-note">安装时点下的「同意」，授权了这些工具<strong>读取网页内容 / 键盘输入</strong>——对话就此被记录</div>
+    </div>
+
+    <div class="pipe" id="pipe-1">
+      <div class="pipe-label">抓取对话上传</div>
+      <div class="pipe-label-under">提问 + 回答<br/>+ 时间戳</div>
+    </div>
+
+    <!-- 节点 2：数据商 -->
+    <div class="node" id="node-broker">
+      <span class="n-step">第 2 环 · 收数据的</span>
+      <h3>数据商</h3>
+      <div class="n-sub">Datos、BiScience 这类点击流数据公司</div>
+      <div class="n-viz">
+        <div class="funnel-wrap">
+          <div class="funnel">
+            <div class="f-top">汇集海量原始对话</div>
+            <div class="f-mid">去除个人身份信息</div>
+            <div class="f-bot">匿名化</div>
+          </div>
+          <div class="pkg-box">&#128230; 打包成数据商品</div>
+        </div>
+      </div>
+      <div class="n-note">从成百上千个插件回收对话，清洗后<strong>按月出售给任何买家</strong></div>
+    </div>
+
+    <div class="pipe" id="pipe-2">
+      <div class="pipe-label">授权出售</div>
+      <div class="pipe-label-under">每月数千万条<br/>真实对话</div>
+    </div>
+    <div class="money-pipe" id="money-1">
+      <div class="m-label">$ 付费购买</div>
+    </div>
+
+    <!-- 节点 3：Profound -->
+    <div class="node" id="node-profound">
+      <span class="n-step">第 3 环 · 买数据的</span>
+      <h3>Profound</h3>
+      <div class="n-sub">自己不采集，花钱买数据、建模还原全人群</div>
+      <div class="n-viz">
+        <div class="chart">
+          <div class="bar-item">
+            <div class="b-head"><span class="b-label">好看的电视</span><span class="b-val">8,200 次/月</span></div>
+            <div class="b-track"><div class="b-fill" style="width:96%"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="b-head"><span class="b-label">画质好的电视</span><span class="b-val">5,100 次/月</span></div>
+            <div class="b-track"><div class="b-fill" style="width:62%"></div></div>
+          </div>
+          <div class="bar-item dim">
+            <div class="b-head"><span class="b-label">设计外观好的电视</span><span class="b-val">310 次/月</span></div>
+            <div class="b-track"><div class="b-fill" style="width:12%"></div></div>
+          </div>
+          <div class="bar-item dim">
+            <div class="b-head"><span class="b-label">防蓝光电视</span><span class="b-val">190 次/月</span></div>
+            <div class="b-track"><div class="b-fill" style="width:8%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="n-note">统计建模校正人群偏差 → <strong>每类问题被问了多少次</strong>，每周更新</div>
+    </div>
+
+    <div class="pipe" id="pipe-3">
+      <div class="pipe-label">购买数据</div>
+      <div class="pipe-label-under">真实提问量<br/>逐条可查</div>
+    </div>
+    <div class="money-pipe" id="money-2">
+      <div class="m-label">$ 付费购买</div>
+    </div>
+
+    <!-- 节点 4：我们 -->
+    <div class="node focus" id="node-us">
+      <span class="n-step">第 4 环 · 也是买数据的</span>
+      <h3>我们的选词</h3>
+      <div class="n-sub">直接购买这份数据——和 Profound 向数据商买数据，是同一条链上的同一种买法</div>
+      <div class="n-viz">
+        <div class="pick">
+          <div class="pick-row win"><span>&#10003; 好看的电视推荐</span><span class="tag">量大 · 优先做</span></div>
+          <div class="pick-row"><span>设计外观好的电视</span><span class="tag">被上面覆盖</span></div>
+          <div class="pick-row"><span>&#10007; 安装方便的电视</span><span class="tag">痛点词 · 不做</span></div>
+        </div>
+      </div>
+      <div class="n-note">哪个词用户真的在问、问得多，<strong>数据说了算</strong>，不靠拍脑袋</div>
+    </div>
+  </div>
+
+  <div id="summary">
+    <strong>一句话：</strong>AI 提问量不是猜的——几百万真实用户的 VPN、广告拦截器、输入法把对话记下来，数据商洗干净打包出售，Profound 花钱买回来数一数，<span class="hl">我们再把这份数据买过来，替客户挑出真正值得做的词。</span>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const stage = document.getElementById('stage');
+    function fit() {
+      const s = Math.min(innerWidth / 1920, innerHeight / 1080);
+      stage.style.transform = 'translate(-50%, -50%) scale(' + s + ')';
+    }
+    addEventListener('resize', fit); fit();
+  })();
+</script>
+</body>
+</html>

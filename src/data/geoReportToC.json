@@ -1,0 +1,1240 @@
+{
+  "meta": {
+    "fetched_at": "2026-08-17T03:44:36.612Z",
+    "api_base": "https://api.geotopone.com",
+    "project_id": 437,
+    "project_name": "兹润-ToC①",
+    "target_product": "兹润",
+    "target_brand_name": null,
+    "start_date": "2026-08-14",
+    "end_date": "2026-08-16"
+  },
+  "platforms": [
+    {
+      "id": 1,
+      "name": "DeepSeek",
+      "url": "https://app.geoindexfuture.com/logo/deepseek.png",
+      "crawl_enabled": 1,
+      "max_crawl_accounts": 15,
+      "crawl_rate_config": {
+        "requests_per_hour": 30,
+        "request_interval_sec": 120,
+        "batch_duration_sec": 24400,
+        "batch_max_requests": 60,
+        "batch_interval_sec": 24400
+      },
+      "crawl_rate_effective": {
+        "requests_per_hour": 30,
+        "request_interval_sec": 120,
+        "batch_duration_sec": 24400,
+        "batch_max_requests": 60,
+        "batch_interval_sec": 24400
+      },
+      "crawl_rate_source": "platform"
+    },
+    {
+      "id": 2,
+      "name": "豆包",
+      "url": "https://app.geoindexfuture.com/logo/doubao.png",
+      "crawl_enabled": 1,
+      "max_crawl_accounts": 10,
+      "crawl_rate_config": null,
+      "crawl_rate_effective": {
+        "requests_per_hour": -1,
+        "request_interval_sec": 30,
+        "batch_duration_sec": 86400,
+        "batch_max_requests": 1000,
+        "batch_interval_sec": 60
+      },
+      "crawl_rate_source": "global"
+    },
+    {
+      "id": 3,
+      "name": "元宝",
+      "url": "https://app.geoindexfuture.com/logo/yuanbao.png",
+      "crawl_enabled": 1,
+      "max_crawl_accounts": 10,
+      "crawl_rate_config": null,
+      "crawl_rate_effective": {
+        "requests_per_hour": -1,
+        "request_interval_sec": 30,
+        "batch_duration_sec": 86400,
+        "batch_max_requests": 1000,
+        "batch_interval_sec": 60
+      },
+      "crawl_rate_source": "global"
+    },
+    {
+      "id": 5,
+      "name": "通义千问",
+      "url": "https://app.geoindexfuture.com/logo/qwen.png",
+      "crawl_enabled": 1,
+      "max_crawl_accounts": 10,
+      "crawl_rate_config": null,
+      "crawl_rate_effective": {
+        "requests_per_hour": -1,
+        "request_interval_sec": 30,
+        "batch_duration_sec": 86400,
+        "batch_max_requests": 1000,
+        "batch_interval_sec": 60
+      },
+      "crawl_rate_source": "global"
+    },
+    {
+      "id": 11,
+      "name": "蚂蚁阿福",
+      "url": "https://app.geoindexfuture.com/logo/afu-v2.png",
+      "crawl_enabled": 1,
+      "max_crawl_accounts": 20,
+      "crawl_rate_config": null,
+      "crawl_rate_effective": {
+        "requests_per_hour": -1,
+        "request_interval_sec": 30,
+        "batch_duration_sec": 86400,
+        "batch_max_requests": 1000,
+        "batch_interval_sec": 60
+      },
+      "crawl_rate_source": "global"
+    }
+  ],
+  "stats": {
+    "brand_mention_rate": 6.1,
+    "top1_mention_rate": null,
+    "top3_mention_rate": null,
+    "avg_position": 5.6,
+    "daily_stats": [
+      {
+        "date": "2026-08-14",
+        "mention_rate": 5,
+        "avg_position": 5.5
+      },
+      {
+        "date": "2026-08-15",
+        "mention_rate": 6,
+        "avg_position": 5.9
+      },
+      {
+        "date": "2026-08-16",
+        "mention_rate": 7,
+        "avg_position": 5.4
+      }
+    ],
+    "platform_stats": [
+      {
+        "platform_id": 1,
+        "platform_name": "DeepSeek",
+        "platform_logo": "https://app.geoindexfuture.com/logo/deepseek.png",
+        "brand_mention_rate": 17.5,
+        "avg_position": 3.6
+      },
+      {
+        "platform_id": 2,
+        "platform_name": "豆包",
+        "platform_logo": "https://app.geoindexfuture.com/logo/doubao.png",
+        "brand_mention_rate": 0.8,
+        "avg_position": 5.3
+      },
+      {
+        "platform_id": 3,
+        "platform_name": "元宝",
+        "platform_logo": "https://app.geoindexfuture.com/logo/yuanbao.png",
+        "brand_mention_rate": 10,
+        "avg_position": 6.7
+      },
+      {
+        "platform_id": 5,
+        "platform_name": "通义千问",
+        "platform_logo": "https://app.geoindexfuture.com/logo/qwen.png",
+        "brand_mention_rate": 0,
+        "avg_position": 0
+      },
+      {
+        "platform_id": 11,
+        "platform_name": "蚂蚁阿福",
+        "platform_logo": "https://app.geoindexfuture.com/logo/afu-v2.png",
+        "brand_mention_rate": 0,
+        "avg_position": 0
+      }
+    ]
+  },
+  "influence": {
+    "total_conversations": 560,
+    "list": [
+      {
+        "rank": 1,
+        "brand_name": "海露",
+        "favicon_url": null,
+        "influence_score": 60.6,
+        "mention_rate": 40.4,
+        "avg_position": 1.9,
+        "is_target": false
+      },
+      {
+        "rank": 2,
+        "brand_name": "爱丽",
+        "favicon_url": null,
+        "influence_score": 49.3,
+        "mention_rate": 30.2,
+        "avg_position": 3.2,
+        "is_target": false
+      },
+      {
+        "rank": 3,
+        "brand_name": "瑞珠",
+        "favicon_url": null,
+        "influence_score": 44.5,
+        "mention_rate": 26.8,
+        "avg_position": 3.9,
+        "is_target": false
+      },
+      {
+        "rank": 4,
+        "brand_name": "思然",
+        "favicon_url": null,
+        "influence_score": 38.8,
+        "mention_rate": 22.7,
+        "avg_position": 4.7,
+        "is_target": false
+      },
+      {
+        "rank": 9,
+        "brand_name": "兹润",
+        "favicon_url": null,
+        "influence_score": 25.3,
+        "mention_rate": 6.1,
+        "avg_position": 5.6,
+        "is_target": true
+      }
+    ]
+  },
+  "entries": {
+    "total": 40,
+    "list": [
+      {
+        "entry_id": 11601,
+        "entry_name": "抗炎的干眼症滴眼液推荐",
+        "mention_rate": 35.7,
+        "position": 1.1,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/63ebf1fa305f4c638a00fa7093f4f208.png"
+      },
+      {
+        "entry_id": 11609,
+        "entry_name": "抗炎的干眼症眼药水推荐",
+        "mention_rate": 35.7,
+        "position": 2,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/84e5e6129ce54f918e7cb50bf319729a.png"
+      },
+      {
+        "entry_id": 11587,
+        "entry_name": "抗炎的眼睛干涩眼药水推荐",
+        "mention_rate": 21.4,
+        "position": 2.9,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/5c233f4ca9d74c9f82b206a9c107538c.png"
+      },
+      {
+        "entry_id": 11598,
+        "entry_name": "干眼症滴眼液品牌排行榜",
+        "mention_rate": 21.4,
+        "position": 6.1,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/90c71056c5464449bd559daebe209f49.png"
+      },
+      {
+        "entry_id": 11605,
+        "entry_name": "滴着舒服的干眼症滴眼液推荐",
+        "mention_rate": 21.4,
+        "position": 3.6,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/59c94b8bdb374985b235754d0e7e8de5.png"
+      },
+      {
+        "entry_id": 11606,
+        "entry_name": "干眼症眼药水品牌排行榜",
+        "mention_rate": 21.4,
+        "position": 6.3,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/0bd9383fd3804b709f3d6b4c66cca009.png"
+      },
+      {
+        "entry_id": 11576,
+        "entry_name": "人工泪液无效后用的眼睛干涩眼药水推荐",
+        "mention_rate": 14.3,
+        "position": 1.7,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/21aec5d84c6142e280286c4c5a16032a.png"
+      },
+      {
+        "entry_id": 11588,
+        "entry_name": "能促进泪液分泌的眼睛干涩眼药水推荐",
+        "mention_rate": 14.3,
+        "position": 2.1,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/514330ff52394fe7a3937e557517cfda.png"
+      },
+      {
+        "entry_id": 11602,
+        "entry_name": "中重度干眼用的干眼症滴眼液推荐",
+        "mention_rate": 14.3,
+        "position": 1.9,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/9947ef4492dd410d9c9735fd508f5508.png"
+      },
+      {
+        "entry_id": 11610,
+        "entry_name": "安全的干眼症眼药水推荐",
+        "mention_rate": 14.3,
+        "position": 3.1,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/7757c1dca95c475d854f66fec8e036f0.png"
+      },
+      {
+        "entry_id": 11589,
+        "entry_name": "轻中重度干眼都能用的眼药水推荐",
+        "mention_rate": 7.1,
+        "position": 2.8,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/856992f7236145a984f7a42f6b697476.png"
+      },
+      {
+        "entry_id": 11596,
+        "entry_name": "不含激素的眼睛干涩眼药水推荐",
+        "mention_rate": 7.1,
+        "position": 2.8,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/089771d1c9ba4c8d8ca3630bf7270456.png"
+      },
+      {
+        "entry_id": 11599,
+        "entry_name": "效果好的干眼症滴眼液推荐",
+        "mention_rate": 7.1,
+        "position": 3.1,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/c6479924db62463cbab53964272f4b0a.png"
+      },
+      {
+        "entry_id": 11607,
+        "entry_name": "效果好的干眼症眼药水推荐",
+        "mention_rate": 7.1,
+        "position": 3.8,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/6275786a41684249891f4d988f151a6e.png"
+      },
+      {
+        "entry_id": 11571,
+        "entry_name": "眼睛干涩眼药水品牌排行榜",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/5e52ac2b6a50415cbbcb7f992ee09706.png"
+      },
+      {
+        "entry_id": 11572,
+        "entry_name": "眼睛干涩眼药水品牌推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/870c376eccb24618a550220420e3a25f.png"
+      },
+      {
+        "entry_id": 11573,
+        "entry_name": "效果好的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/fca297e536fb4068b9e14791f6cddf77.png"
+      },
+      {
+        "entry_id": 11574,
+        "entry_name": "性价比高的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/d372fedfaa1f4c5e91fbf0d6a1a7dc35.png"
+      },
+      {
+        "entry_id": 11575,
+        "entry_name": "口碑好的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/446f9d56778248d6ad821cfec99b6ddd.png"
+      },
+      {
+        "entry_id": 11577,
+        "entry_name": "长期看电脑手机的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/4612ee5fc1904981b0471130af0f8143.png"
+      },
+      {
+        "entry_id": 11578,
+        "entry_name": "眼干眼涩看东西模糊用的眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/2f6416aedbc44140ad255d5f71880580.png"
+      },
+      {
+        "entry_id": 11579,
+        "entry_name": "能走医保报销的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/3bdd8b9f46184c3cbb53e4f6a5bedb31.png"
+      },
+      {
+        "entry_id": 11580,
+        "entry_name": "轻度干眼用的眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/0993316db483431d8f4487984aabb62a.png"
+      },
+      {
+        "entry_id": 11581,
+        "entry_name": "可以长期使用的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/be27b97d41eb4da9a68e059675549d05.png"
+      },
+      {
+        "entry_id": 11582,
+        "entry_name": "有医疗背书的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/6cc89aa879cd47c19d86beb80f6e7dde.png"
+      },
+      {
+        "entry_id": 11583,
+        "entry_name": "适合戴隐形眼镜人群的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/07c06e801ddf4a2dae5472fe2af536a9.png"
+      },
+      {
+        "entry_id": 11584,
+        "entry_name": "适合干燥综合征患者的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/387d41a4355448e9953a5c25bc5cc4f4.png"
+      },
+      {
+        "entry_id": 11585,
+        "entry_name": "眼科手术后能用的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/9c3142bd46a441bf8b3e219067be6db8.png"
+      },
+      {
+        "entry_id": 11586,
+        "entry_name": "线上问诊就能开的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/1dce419ec487420da7624975e6030b5b.png"
+      },
+      {
+        "entry_id": 11590,
+        "entry_name": "中重度干眼用的眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/022eb35545cc4df3be31d23517fdec8a.png"
+      },
+      {
+        "entry_id": 11591,
+        "entry_name": "安全的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/949fd4f551404d3e94b14cd08812edac.png"
+      },
+      {
+        "entry_id": 11592,
+        "entry_name": "滴着舒服的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/96cb7fd46f4b405f8c93b0389ce3572e.png"
+      },
+      {
+        "entry_id": 11593,
+        "entry_name": "副作用小的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/40f25bef66584a76bdde97232c1e11e7.png"
+      },
+      {
+        "entry_id": 11594,
+        "entry_name": "干眼一线治疗用的眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/b638fee959ec49fb98e7d5aef944a4ef.png"
+      },
+      {
+        "entry_id": 11595,
+        "entry_name": "医生常开的眼睛干涩眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/a08fc9610ab344399af12c64f415f3fe.png"
+      },
+      {
+        "entry_id": 11597,
+        "entry_name": "治疗干眼症的滴眼液有哪些",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/5bfd84f4010340d9bbd2cde3de443377.png"
+      },
+      {
+        "entry_id": 11600,
+        "entry_name": "医生常开的干眼症滴眼液推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/cc593d58285740b3b492e5303904f36d.png"
+      },
+      {
+        "entry_id": 11603,
+        "entry_name": "轻度干眼的干眼症滴眼液推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/36c31755c1b74bfeae9ecacaca64217f.png"
+      },
+      {
+        "entry_id": 11604,
+        "entry_name": "安全的干眼症滴眼液推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/988647d13760446b995afc81dc016403.png"
+      },
+      {
+        "entry_id": 11608,
+        "entry_name": "医生常开的干眼症眼药水推荐",
+        "mention_rate": 0,
+        "position": null,
+        "platform_ids": [
+          1,
+          2,
+          5,
+          3,
+          11
+        ],
+        "last_conversation_time": "2026-08-15T16:00:00.000Z",
+        "last_screenshot_url": "https://app.geoindexfuture.com/screenshots/20260815/e37d7ef3b2914bf6a8175f202fa6e046.png"
+      }
+    ]
+  },
+  "compare": {
+    "target_product": "兹润",
+    "mention_rate_ranking": [
+      {
+        "brand_id": 82087,
+        "brand_name": "海露",
+        "product_id": null,
+        "product_name": null,
+        "display_name": "海露",
+        "mention_count": 226,
+        "mention_rate": 40.4,
+        "is_target": false
+      },
+      {
+        "brand_id": 82088,
+        "brand_name": "爱丽",
+        "product_id": null,
+        "product_name": null,
+        "display_name": "爱丽",
+        "mention_count": 169,
+        "mention_rate": 30.2,
+        "is_target": false
+      },
+      {
+        "brand_id": 82089,
+        "brand_name": "瑞珠",
+        "product_id": null,
+        "product_name": null,
+        "display_name": "瑞珠",
+        "mention_count": 150,
+        "mention_rate": 26.8,
+        "is_target": false
+      },
+      {
+        "brand_id": 82090,
+        "brand_name": "思然",
+        "product_id": null,
+        "product_name": null,
+        "display_name": "思然",
+        "mention_count": 127,
+        "mention_rate": 22.7,
+        "is_target": false
+      },
+      {
+        "brand_id": 79840,
+        "brand_name": "兹润",
+        "product_id": null,
+        "product_name": null,
+        "display_name": "兹润",
+        "mention_count": 34,
+        "mention_rate": 6.1,
+        "is_target": true
+      }
+    ],
+    "position_ranking": [
+      {
+        "brand_id": 82087,
+        "brand_name": "海露",
+        "product_id": null,
+        "product_name": null,
+        "display_name": "海露",
+        "avg_position": 1.9,
+        "mention_count": 226,
+        "is_target": false
+      },
+      {
+        "brand_id": 82088,
+        "brand_name": "爱丽",
+        "product_id": null,
+        "product_name": null,
+        "display_name": "爱丽",
+        "avg_position": 3.2,
+        "mention_count": 169,
+        "is_target": false
+      },
+      {
+        "brand_id": 82089,
+        "brand_name": "瑞珠",
+        "product_id": null,
+        "product_name": null,
+        "display_name": "瑞珠",
+        "avg_position": 3.9,
+        "mention_count": 150,
+        "is_target": false
+      },
+      {
+        "brand_id": 82090,
+        "brand_name": "思然",
+        "product_id": null,
+        "product_name": null,
+        "display_name": "思然",
+        "avg_position": 4.7,
+        "mention_count": 127,
+        "is_target": false
+      },
+      {
+        "brand_id": 79840,
+        "brand_name": "兹润",
+        "product_id": null,
+        "product_name": null,
+        "display_name": "兹润",
+        "avg_position": 5.6,
+        "mention_count": 34,
+        "is_target": true
+      }
+    ],
+    "rate_daily": [
+      {
+        "date": "2026-08-14",
+        "海露": 48.1,
+        "爱丽": 38.1,
+        "瑞珠": 28.8,
+        "思然": 23.1,
+        "兹润": 5
+      },
+      {
+        "date": "2026-08-15",
+        "海露": 38.5,
+        "爱丽": 27,
+        "瑞珠": 27.5,
+        "思然": 22.5,
+        "兹润": 6
+      },
+      {
+        "date": "2026-08-16",
+        "海露": 36,
+        "爱丽": 27,
+        "瑞珠": 24.5,
+        "思然": 22.5,
+        "兹润": 7
+      }
+    ],
+    "position_daily": [
+      {
+        "date": "2026-08-14",
+        "海露": 1.8,
+        "爱丽": 2.9,
+        "瑞珠": 4,
+        "思然": 4.7,
+        "兹润": 5.5
+      },
+      {
+        "date": "2026-08-15",
+        "海露": 1.8,
+        "爱丽": 3.4,
+        "瑞珠": 4.1,
+        "思然": 4.7,
+        "兹润": 5.9
+      },
+      {
+        "date": "2026-08-16",
+        "海露": 2,
+        "爱丽": 3.2,
+        "瑞珠": 3.8,
+        "思然": 4.6,
+        "兹润": 5.4
+      }
+    ],
+    "top1_ranking": [
+      {
+        "rank": 1,
+        "brand_name": "海露",
+        "top1_mention_rate": 32.5,
+        "is_target": false
+      },
+      {
+        "rank": 2,
+        "brand_name": "莎普爱思",
+        "top1_mention_rate": 3.8,
+        "is_target": false
+      },
+      {
+        "rank": 3,
+        "brand_name": "爱丽",
+        "top1_mention_rate": 2.5,
+        "is_target": false
+      },
+      {
+        "rank": 4,
+        "brand_name": "瑞珠",
+        "top1_mention_rate": 2.5,
+        "is_target": false
+      },
+      {
+        "rank": 5,
+        "brand_name": "兹润",
+        "top1_mention_rate": 2.3,
+        "is_target": true
+      },
+      {
+        "rank": 6,
+        "brand_name": "思然",
+        "top1_mention_rate": 1.1,
+        "is_target": false
+      },
+      {
+        "rank": 7,
+        "brand_name": "丽爱思",
+        "top1_mention_rate": 0.9,
+        "is_target": false
+      },
+      {
+        "rank": 8,
+        "brand_name": "普南扑灵",
+        "top1_mention_rate": 0.7,
+        "is_target": false
+      },
+      {
+        "rank": 9,
+        "brand_name": "恒沁",
+        "top1_mention_rate": 0.5,
+        "is_target": false
+      },
+      {
+        "rank": 10,
+        "brand_name": "乐敦",
+        "top1_mention_rate": 0.4,
+        "is_target": false
+      },
+      {
+        "rank": 11,
+        "brand_name": "润洁",
+        "top1_mention_rate": 0.4,
+        "is_target": false
+      },
+      {
+        "rank": 12,
+        "brand_name": "乐敦莹",
+        "top1_mention_rate": 0.2,
+        "is_target": false
+      },
+      {
+        "rank": 13,
+        "brand_name": "恒宜",
+        "top1_mention_rate": 0.2,
+        "is_target": false
+      },
+      {
+        "rank": 14,
+        "brand_name": "悟兹法姆",
+        "top1_mention_rate": 0.2,
+        "is_target": false
+      },
+      {
+        "rank": 15,
+        "brand_name": "润尔乐",
+        "top1_mention_rate": 0.2,
+        "is_target": false
+      },
+      {
+        "rank": 16,
+        "brand_name": "潇莱威",
+        "top1_mention_rate": 0.2,
+        "is_target": false
+      },
+      {
+        "rank": 17,
+        "brand_name": "秀瞳",
+        "top1_mention_rate": 0.2,
+        "is_target": false
+      },
+      {
+        "rank": 18,
+        "brand_name": "立宝舒",
+        "top1_mention_rate": 0.2,
+        "is_target": false
+      },
+      {
+        "rank": 19,
+        "brand_name": "联邦制药",
+        "top1_mention_rate": 0.2,
+        "is_target": false
+      },
+      {
+        "rank": 20,
+        "brand_name": "艾明可",
+        "top1_mention_rate": 0.2,
+        "is_target": false
+      }
+    ]
+  },
+  "citations": {
+    "total_conversations": 560,
+    "citation_rate": 89.1,
+    "total_citations": 7752,
+    "platform_stats": [
+      {
+        "platform_name": "小荷健康",
+        "domain": "xiaohe.cn",
+        "logo_url": "https://cdn-yb.icon.qq.com/zuowei_dir/m_xiaohe_cn.ico",
+        "citation_count": 1445,
+        "share": 18.6
+      },
+      {
+        "platform_name": "蚂蚁阿福医学文献库",
+        "domain": "alipayobjects.com",
+        "logo_url": "",
+        "citation_count": 543,
+        "share": 7
+      },
+      {
+        "platform_name": "中国医药信息查询平台",
+        "domain": "dayi.org.cn",
+        "logo_url": "https://cdn.deepseek.com/site-icons/dayi.org.cn",
+        "citation_count": 491,
+        "share": 6.3
+      },
+      {
+        "platform_name": "夸克",
+        "domain": "quark.cn",
+        "logo_url": "https://s2.zimgs.cn/ims?kt=url&at=smstruct&key=aHR0cHM6Ly9jZG4uc20uY24vdGVtcC8yMDI1MTIwMzE1NTYyNC03NGIycmh2aXUxYWs3dzlpcGc4Mmo4ZXFpdHhpZ3l6ay5wbmc=&sign=yx:xFDDZDGZ-hKiv8vktQEZGp8yhQY=&tv=400_400",
+        "citation_count": 415,
+        "share": 5.4
+      },
+      {
+        "platform_name": "神马搜索",
+        "domain": "sm.cn",
+        "logo_url": "",
+        "citation_count": 326,
+        "share": 4.2
+      }
+    ],
+    "articles": [
+      {
+        "title": "Dry Eye Syndrome Preferred Practice Pattern®.",
+        "link_url": "https://pubmed.ncbi.nlm.nih.gov/38349301",
+        "domain": "nih.gov",
+        "platform_name": "NIH",
+        "logo_url": "https://cdn.deepseek.com/site-icons/nih.gov",
+        "total_citations": 64,
+        "avg_citations": 32,
+        "has_target_product": false
+      },
+      {
+        "title": "中国干眼临床诊疗专家共识(2024年)",
+        "link_url": "https://mdn.alipayobjects.com/medlib_data/afts/file/ihIeTKPjEC0AAAAAgCAAAAgAnJhPAQFr",
+        "domain": "alipayobjects.com",
+        "platform_name": "蚂蚁阿福医学文献库",
+        "logo_url": "",
+        "total_citations": 62,
+        "avg_citations": 31,
+        "has_target_product": false
+      },
+      {
+        "title": "British Society for Rheumatology guideline on management of adult and juvenile onset Sjögren disease.",
+        "link_url": "https://mdn.alipayobjects.com/medlib_data/afts/file/o3ONSKroHi0AAAAAgDAAAAgAnJhPAQFr",
+        "domain": "alipayobjects.com",
+        "platform_name": "蚂蚁阿福医学文献库",
+        "logo_url": "",
+        "total_citations": 52,
+        "avg_citations": 26,
+        "has_target_product": false
+      },
+      {
+        "title": "Clinical Practice Guidelines for Dry Eye:A Comprehensive Approach (2026)",
+        "link_url": "https://mdn.alipayobjects.com/medlib_data/afts/file/ji3CRr34phkAAAAAgBAAAAgAnJhPAQFr",
+        "domain": "alipayobjects.com",
+        "platform_name": "蚂蚁阿福医学文献库",
+        "logo_url": "",
+        "total_citations": 40,
+        "avg_citations": 40,
+        "has_target_product": false
+      },
+      {
+        "title": "干眼症滴什么眼药水",
+        "link_url": "https://page.sm.cn/blm/midpage-317/index?h=m.youlai.cn&id=18_f4c433bbf76df2bbd0943e617c7f9404",
+        "domain": "sm.cn",
+        "platform_name": "神马搜索",
+        "logo_url": "",
+        "total_citations": 37,
+        "avg_citations": 12.3,
+        "has_target_product": false
+      },
+      {
+        "title": "Best Preservative-Free Eye Drops",
+        "link_url": "https://dryeyerescue.com/pages/best-preservative-free-eye-drops",
+        "domain": "dryeyerescue.com",
+        "platform_name": "dryeyerescue.com",
+        "logo_url": "https://cdn-yb.icon.qq.com/zuowei_dir/dryeyerescue_com.ico",
+        "total_citations": 36,
+        "avg_citations": 12,
+        "has_target_product": false
+      },
+      {
+        "title": "眼睛干用哪种眼药水比较好_厦门大学附属厦门眼科中心_三甲眼科医院_全国疑难眼病诊疗中心",
+        "link_url": "https://m.xiameneye.org.cn/html/ybbz/gyz/33527.html",
+        "domain": "xiameneye.org.cn",
+        "platform_name": "厦门大学附属厦门眼科中心",
+        "logo_url": "https://cdn.deepseek.com/site-icons/m.xiameneye.org.cn",
+        "total_citations": 32,
+        "avg_citations": 10.7,
+        "has_target_product": false
+      },
+      {
+        "title": "眼睛干涩用什么眼药水",
+        "link_url": "https://page.sm.cn/blm/midpage-317/index?h=m.youlai.cn&id=18_6de4bb99e5f3cc1a7150f8e48ea6ec6b",
+        "domain": "sm.cn",
+        "platform_name": "神马搜索",
+        "logo_url": "",
+        "total_citations": 28,
+        "avg_citations": 9.3,
+        "has_target_product": false
+      },
+      {
+        "title": "干燥综合征超药品说明书用药中国临床实践指南(2023版)",
+        "link_url": "https://mdn.alipayobjects.com/medlib_data/afts/file/z7hoSI61Nr4AAAAAgDAAAAgAnJhPAQFr",
+        "domain": "alipayobjects.com",
+        "platform_name": "蚂蚁阿福医学文献库",
+        "logo_url": "",
+        "total_citations": 28,
+        "avg_citations": 14,
+        "has_target_product": false
+      },
+      {
+        "title": "同为抗炎，机制大不同！张弘教授谈0.05%环孢素滴眼液（Ⅱ）与利非司特",
+        "link_url": "https://www.pharnexcloud.com/zixun/shiye/zjgd_108274",
+        "domain": "pharnexcloud.com",
+        "platform_name": "摩熵医药",
+        "logo_url": "https://s2.zimgs.cn/ims?at=smstruct&kt=url&key=aHR0cHM6Ly93d3cucGhhcm5leGNsb3VkLmNvbS9mYXZpY29uLmljbw==&sign=yx:wo5CszQ9WrlWztVIoj29GKJxy24=&tv=0_0&p=",
+        "total_citations": 28,
+        "avg_citations": 14,
+        "has_target_product": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "meta": {
+    "brand": "华润三九",
+    "dateRange": "2026-08-04~2026-08-04",
+    "totalArticles": 1374,
+    "brandTopN": 0,
+    "refBrand": "竞品",
+    "sourceFile": "投放平台量化分析_三九养胃舒颗粒-ToC①_20260804-20260804_P457_20260810_195407.xlsx"
+  },
+  "a5": [
+    {
+      "rank": 1,
+      "site": "中国医药信息查询平台",
+      "total": 205,
+      "coverCount": 2,
+      "cover": "DeepSeek、元宝",
+      "deepseek": 133,
+      "doubao": 0,
+      "yuanbao": 72,
+      "tongyi": 1,
+      "weight": "★★★"
+    },
+    {
+      "rank": 2,
+      "site": "复禾健康",
+      "total": 64,
+      "coverCount": 2,
+      "cover": "元宝、通义千问",
+      "deepseek": 0,
+      "doubao": 0,
+      "yuanbao": 55,
+      "tongyi": 9,
+      "weight": "★★★"
+    },
+    {
+      "rank": 3,
+      "site": "百度知道",
+      "total": 63,
+      "coverCount": 2,
+      "cover": "元宝、通义千问",
+      "deepseek": 0,
+      "doubao": 0,
+      "yuanbao": 55,
+      "tongyi": 8,
+      "weight": "★★★"
+    },
+    {
+      "rank": 4,
+      "site": "39健康网",
+      "total": 37,
+      "coverCount": 2,
+      "cover": "元宝、通义千问",
+      "deepseek": 1,
+      "doubao": 0,
+      "yuanbao": 33,
+      "tongyi": 4,
+      "weight": "★★★"
+    },
+    {
+      "rank": 5,
+      "site": "夸克",
+      "total": 189,
+      "coverCount": 1,
+      "cover": "通义千问",
+      "deepseek": 0,
+      "doubao": 0,
+      "yuanbao": 0,
+      "tongyi": 189,
+      "weight": "★★★"
+    }
+  ],
+  "aiTop10": {
+    "DeepSeek": [],
+    "豆包": [],
+    "元宝": [],
+    "通义千问": []
+  },
+  "bFull": {},
+  "bRep": [],
+  "c5": [
+    {
+      "rank": 1,
+      "site": "www.315jiage.cn",
+      "cites": 5,
+      "hits": 5,
+      "rate": "1",
+      "deepseek": [
+        0,
+        0
+      ],
+      "doubao": [
+        0,
+        0
+      ],
+      "yuanbao": [
+        5,
+        5
+      ],
+      "tongyi": [
+        0,
+        0
+      ]
+    },
+    {
+      "rank": 2,
+      "site": "湖南药事服务网",
+      "cites": 4,
+      "hits": 4,
+      "rate": "1",
+      "deepseek": [
+        0,
+        0
+      ],
+      "doubao": [
+        0,
+        0
+      ],
+      "yuanbao": [
+        4,
+        4
+      ],
+      "tongyi": [
+        0,
+        0
+      ]
+    },
+    {
+      "rank": 3,
+      "site": "国家医疗保障局",
+      "cites": 3,
+      "hits": 3,
+      "rate": "1",
+      "deepseek": [
+        0,
+        0
+      ],
+      "doubao": [
+        0,
+        0
+      ],
+      "yuanbao": [
+        3,
+        3
+      ],
+      "tongyi": [
+        0,
+        0
+      ]
+    },
+    {
+      "rank": 4,
+      "site": "daiichisankyo-hc.co.jp",
+      "cites": 3,
+      "hits": 3,
+      "rate": "1",
+      "deepseek": [
+        0,
+        0
+      ],
+      "doubao": [
+        0,
+        0
+      ],
+      "yuanbao": [
+        3,
+        3
+      ],
+      "tongyi": [
+        0,
+        0
+      ]
+    },
+    {
+      "rank": 5,
+      "site": "中国食品药品网",
+      "cites": 3,
+      "hits": 2,
+      "rate": "66.67%",
+      "deepseek": [
+        1,
+        1
+      ],
+      "doubao": [
+        0,
+        0
+      ],
+      "yuanbao": [
+        2,
+        1
+      ],
+      "tongyi": [
+        0,
+        0
+      ]
+    }
+  ],
+  "cats": [
+    {
+      "category": "其他",
+      "leftCount": 48,
+      "leftPct": 48.0,
+      "rightCount": 46,
+      "rightPct": 46.0,
+      "color": "#004CE5"
+    },
+    {
+      "category": "知识科普",
+      "leftCount": 28,
+      "leftPct": 28.0,
+      "rightCount": 27,
+      "rightPct": 27.0,
+      "color": "#3B82F6"
+    },
+    {
+      "category": "排行榜",
+      "leftCount": 17,
+      "leftPct": 17.0,
+      "rightCount": 23,
+      "rightPct": 23.0,
+      "color": "#60A5FA"
+    },
+    {
+      "category": "行业资讯",
+      "leftCount": 5,
+      "leftPct": 5.0,
+      "rightCount": 3,
+      "rightPct": 3.0,
+      "color": "#93C5FD"
+    },
+    {
+      "category": "单品介绍",
+      "leftCount": 2,
+      "leftPct": 2.0,
+      "rightCount": 1,
+      "rightPct": 1.0,
+      "color": "#F59E0B"
+    },
+    {
+      "category": "测评",
+      "leftCount": 0,
+      "leftPct": 0.0,
+      "rightCount": 0,
+      "rightPct": 0.0,
+      "color": "#10B981"
+    }
+  ],
+  "allTop": [],
+  "brandDetail": []
+}
